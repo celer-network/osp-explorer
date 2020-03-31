@@ -102,7 +102,6 @@ export default class Map extends Component {
         getSourcePosition: d => nodes[d.peer0].coordinates,
         getTargetPosition: d => nodes[d.peer1].coordinates,
         getColor: d => {
-          console.log(connectedChannels);
           if (!selectedNode || connectedChannels[d.id]) {
             return CHANNEL_COLOR.default;
           }
@@ -122,7 +121,7 @@ export default class Map extends Component {
         controller={true}
         layers={this.renderLayers()}
         onClick={this.handleClick}
-        style={{ cursor: "pointer !important" }}
+        getCursor={() => "default"}
       >
         <StaticMap reuseMaps mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN} />
       </DeckGL>

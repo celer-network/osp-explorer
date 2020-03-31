@@ -1,12 +1,13 @@
 import React, { Component } from "react";
 import { Layout } from "antd";
 
-import Map from "../components/map";
+import Map from "../components/Map";
+import NodeTable from "../components/NodeTable";
 import styles from "./index.module.css";
 
 const { Sider, Content } = Layout;
 
-class HomePage extends Component {
+class Index extends Component {
   constructor(props) {
     super(props);
 
@@ -27,7 +28,9 @@ class HomePage extends Component {
 
     return (
       <Layout>
-        <Sider>Sider</Sider>
+        <Sider width={300}>
+          <NodeTable nodes={nodes} />
+        </Sider>
         <Layout>
           <Content className={styles.content}>
             <Map
@@ -43,7 +46,7 @@ class HomePage extends Component {
   }
 }
 
-HomePage.getInitialProps = async function() {
+Index.getInitialProps = async function() {
   return {
     nodes: {
       a: {
@@ -77,4 +80,4 @@ HomePage.getInitialProps = async function() {
   };
 };
 
-export default HomePage;
+export default Index;
