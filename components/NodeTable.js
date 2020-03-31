@@ -1,6 +1,5 @@
 import React, { Component } from "react";
 import { Table, Input, Button } from "antd";
-import Highlighter from "react-highlight-words";
 import { SearchOutlined } from "@ant-design/icons";
 
 export default class NodeTable extends Component {
