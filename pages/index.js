@@ -3,6 +3,7 @@ import { Layout } from "antd";
 
 import Map from "../components/Map";
 import NodeTable from "../components/NodeTable";
+import NodeDetails from "../components/NodeDetails";
 import styles from "./index.module.css";
 
 const { Sider, Content } = Layout;
@@ -29,7 +30,7 @@ class Index extends Component {
     return (
       <Layout>
         <Sider width={300}>
-          <NodeTable nodes={nodes} />
+          <NodeTable nodes={nodes} onSelectNode={this.handleSelectNode} />
         </Sider>
         <Layout>
           <Content className={styles.content}>
@@ -37,8 +38,9 @@ class Index extends Component {
               nodes={nodes}
               channels={channels}
               selectedNode={selectedNode}
-              onClickNode={this.handleSelectNode}
+              onSelectNode={this.handleSelectNode}
             />
+            <NodeDetails selectedNode={selectedNode} />
           </Content>
         </Layout>
       </Layout>
@@ -52,7 +54,13 @@ Index.getInitialProps = async function() {
       a: {
         id: "a",
         coordinates: [-118.59397, 33.4672],
-        channels: [1, 2]
+        channels: [1, 2],
+        hostname: "12.1.1.1",
+        port: "8000",
+        tokenType: "ETH",
+        acceptConnection: true,
+        paymentNumber: 10,
+        availableBalance: 20000
       },
       b: {
         id: "b",

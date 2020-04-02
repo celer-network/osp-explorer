@@ -3,6 +3,16 @@ import { Table, Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 export default class NodeTable extends Component {
+  onRow = record => {
+    const { onSelectNode } = this.props;
+
+    return {
+      onClick: () => {
+        onSelectNode(record);
+      }
+    };
+  };
+
   getColumnSearchProps = dataIndex => ({
     filterDropdown: ({
       setSelectedKeys,
@@ -84,7 +94,12 @@ export default class NodeTable extends Component {
       }
     ];
     return (
-      <Table columns={columns} dataSource={Object.values(nodes)} size="small" />
+      <Table
+        columns={columns}
+        dataSource={Object.values(nodes)}
+        size="small"
+        onRow={this.onRow}
+      />
     );
   }
 }

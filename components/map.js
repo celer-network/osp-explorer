@@ -52,14 +52,14 @@ const getConnectedChannels = node => {
 
 export default class Map extends Component {
   handleClick = info => {
-    const { onClickNode } = this.props;
+    const { onSelectNode } = this.props;
     const { layer, object } = info;
     const layerID = _.get(layer, "id");
 
     if (layerID === NODE_LAYER_ID) {
-      onClickNode(object);
+      onSelectNode(object);
     } else {
-      onClickNode(null);
+      onSelectNode(null);
     }
   };
 
