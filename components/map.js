@@ -33,8 +33,8 @@ const getConnectedNodes = (node, channels) => {
 
   _.get(node, "channels", []).forEach(channelID => {
     const channel = channels[channelID];
-    connectedNodes[channel.peer0] = true;
-    connectedNodes[channel.peer1] = true;
+    connectedNodes[channel.peers[0]] = true;
+    connectedNodes[channel.peers[1]] = true;
   });
 
   return connectedNodes;
@@ -99,8 +99,8 @@ export default class Map extends Component {
         id: CHANNEL_LAYER_ID,
         data: Object.values(channels),
         opacity: 0.8,
-        getSourcePosition: d => nodes[d.peer0].coordinates,
-        getTargetPosition: d => nodes[d.peer1].coordinates,
+        getSourcePosition: d => nodes[d.peers[0]].coordinates,
+        getTargetPosition: d => nodes[d.peers[1]].coordinates,
         getColor: d => {
           if (!selectedNode || connectedChannels[d.id]) {
             return CHANNEL_COLOR.default;
