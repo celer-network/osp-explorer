@@ -77,6 +77,9 @@ export default class NodeTable extends Component {
 
   render() {
     const { nodes } = this.props;
+    const pagination = {
+      pageSize: (window.innerHeight - 120) / 39
+    };
     const columns = [
       {
         title: "Address",
@@ -99,6 +102,7 @@ export default class NodeTable extends Component {
         dataSource={Object.values(nodes)}
         size="small"
         onRow={this.onRow}
+        pagination={pagination}
       />
     );
   }

@@ -2,11 +2,15 @@ import React, { Component } from "react";
 import _ from "lodash";
 import { Layout } from "antd";
 import fetch from "isomorphic-unfetch";
+import dynamic from "next/dynamic";
 
 import Map from "../components/Map";
-import NodeTable from "../components/NodeTable";
 import NodeDetails from "../components/NodeDetails";
 import styles from "./index.module.css";
+
+const NodeTable = dynamic(() => import("../components/NodeTable"), {
+  ssr: false
+});
 
 const { Sider, Content } = Layout;
 
@@ -33,7 +37,7 @@ class Index extends Component {
 
     return (
       <Layout>
-        <Sider width={300}>
+        <Sider theme={"light"} width={300}>
           <NodeTable nodes={nodes} onSelectNode={this.handleSelectNode} />
         </Sider>
         <Layout>
