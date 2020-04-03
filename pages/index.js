@@ -1,5 +1,7 @@
 import React, { Component } from "react";
+import _ from "lodash";
 import { Layout } from "antd";
+import fetch from "isomorphic-unfetch";
 
 import Map from "../components/Map";
 import NodeTable from "../components/NodeTable";
@@ -7,6 +9,8 @@ import NodeDetails from "../components/NodeDetails";
 import styles from "./index.module.css";
 
 const { Sider, Content } = Layout;
+
+const BASE_URL = "http://localhost:8000";
 
 class Index extends Component {
   constructor(props) {
@@ -49,42 +53,13 @@ class Index extends Component {
 }
 
 Index.getInitialProps = async function() {
+  const res = await fetch(`${BASE_URL}/db`);
+  const json = await res.json();
+  const { nodes, channels } = json;
+
   return {
-    nodes: {
-      a: {
-        id: "a",
-        coordinates: [-118.59397, 33.4672],
-        channels: [1, 2],
-        hostname: "12.1.1.1",
-        port: "8000",
-        tokenType: "ETH",
-        acceptConnection: true,
-        paymentNumber: 10,
-        availableBalance: 20000
-      },
-      b: {
-        id: "b",
-        coordinates: [-2.858620657849378, 53.3363751054422],
-        channels: [1]
-      },
-      c: {
-        id: "c",
-        coordinates: [-1.71034578407216, 55.03708486080194],
-        channels: [2]
-      }
-    },
-    channels: {
-      1: {
-        id: 1,
-        peer0: "a",
-        peer1: "b"
-      },
-      2: {
-        id: 2,
-        peer0: "a",
-        peer1: "c"
-      }
-    }
+    nodes: _.keyBy(nodes, "id"),
+    channels: _.keyBy(channels, "id")
   };
 };
 

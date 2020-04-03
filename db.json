@@ -1,0 +1,37 @@
+{
+  "nodes": [
+    {
+      "id": "a",
+      "coordinates": [-118.59397, 33.4672],
+      "channels": [1, 2],
+      "hostname": "12.1.1.1",
+      "port": "8000",
+      "tokenType": "ETH",
+      "acceptConnection": true,
+      "paymentNumber": 10,
+      "availableBalance": 20000
+    },
+    {
+      "id": "b",
+      "coordinates": [-2.858620657849378, 53.3363751054422],
+      "channels": [1]
+    },
+    {
+      "id": "c",
+      "coordinates": [-1.71034578407216, 55.03708486080194],
+      "channels": [2]
+    }
+  ],
+  "channels": [
+    {
+      "id": 1,
+      "peer0": "a",
+      "peer1": "b"
+    },
+    {
+      "id": 2,
+      "peer0": "a",
+      "peer1": "c"
+    }
+  ]
+}
