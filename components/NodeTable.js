@@ -3,31 +3,31 @@ import { Table, Input, Button } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
 
 export default class NodeTable extends Component {
-  onRow = record => {
+  onRow = (record) => {
     const { onSelectNode } = this.props;
 
     return {
       onClick: () => {
         onSelectNode(record);
-      }
+      },
     };
   };
 
-  getColumnSearchProps = dataIndex => ({
+  getColumnSearchProps = (dataIndex) => ({
     filterDropdown: ({
       setSelectedKeys,
       selectedKeys,
       confirm,
-      clearFilters
+      clearFilters,
     }) => (
       <div style={{ padding: 8 }}>
         <Input
-          ref={node => {
+          ref={(node) => {
             this.searchInput = node;
           }}
           placeholder={`Search ${dataIndex}`}
           value={selectedKeys[0]}
-          onChange={e =>
+          onChange={(e) =>
             setSelectedKeys(e.target.value ? [e.target.value] : [])
           }
           onPressEnter={() =>
@@ -50,35 +50,44 @@ export default class NodeTable extends Component {
       </div>
     ),
 
-    filterIcon: filtered => (
+    filterIcon: (filtered) => (
       <SearchOutlined style={{ color: filtered ? "#1890ff" : undefined }} />
     ),
 
-    onFilter: (value, record) =>
-      record[dataIndex]
+    onFilter: (value, record) => {
+      if (dataIndex === "channels") {
+        return record[dataIndex].length == value;
+      }
+
+      return record[dataIndex]
         .toString()
         .toLowerCase()
-        .includes(value.toLowerCase()),
+        .includes(value.toLowerCase());
+    },
 
-    onFilterDropdownVisibleChange: visible => {
+    onFilterDropdownVisibleChange: (visible) => {
       if (visible) {
         setTimeout(() => this.searchInput.select());
       }
     },
 
-    render: text => {
+    render: (text, record) => {
       if (dataIndex === "id") {
         return `${text.slice(0, 16)}...`;
       }
 
+      if (dataIndex === "channels") {
+        return record.channels.length;
+      }
+
       return text;
-    }
+    },
   });
 
   render() {
     const { nodes } = this.props;
     const pagination = {
-      pageSize: (window.innerHeight - 120) / 39
+      pageSize: (window.innerHeight - 120) / 39,
     };
     const columns = [
       {
@@ -86,16 +95,17 @@ export default class NodeTable extends Component {
         dataIndex: "id",
         key: "id",
         width: "70%",
-        ...this.getColumnSearchProps("id")
+        ...this.getColumnSearchProps("id"),
       },
       {
         title: "Channels",
         dataIndex: "channels",
         key: "channels",
         width: "30%",
-        ...this.getColumnSearchProps("channels")
-      }
+        ...this.getColumnSearchProps("channels"),
+      },
     ];
+
     return (
       <Table
         columns={columns}

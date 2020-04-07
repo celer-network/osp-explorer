@@ -6,9 +6,11 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "server": "node server/server.js"
+    "server": "node server/server.js",
+    "generate-data": "node server/data-generator.js"
   },
   "dependencies": {
+    "@maxmind/geoip2-node": "^1.4.0",
     "antd": "^4.0.4",
     "deck.gl": "^8.1.0",
     "fs-extra": "^9.0.0",
@@ -20,5 +22,8 @@
     "react-dom": "16.13.1",
     "react-map-gl": "^5.2.3",
     "web3": "^1.2.6"
+  },
+  "devDependencies": {
+    "faker": "^4.1.0"
   }
 }

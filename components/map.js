@@ -12,17 +12,17 @@ const INITIAL_VIEW_STATE = {
   latitude: 52,
   zoom: 3,
   pitch: 0,
-  bearing: 0
+  bearing: 0,
 };
 
 const NODE_COLOR = {
   default: [255, 140, 0],
   selected: [4, 51, 255],
-  unselected: [255, 140, 0, 50]
+  unselected: [255, 140, 0, 50],
 };
 const CHANNEL_COLOR = {
   default: [0, 0, 0],
-  unselected: [0, 0, 0, 50]
+  unselected: [0, 0, 0, 50],
 };
 
 const NODE_LAYER_ID = "nodes";
@@ -31,7 +31,7 @@ const CHANNEL_LAYER_ID = "channels";
 const getConnectedNodes = (node, channels) => {
   const connectedNodes = {};
 
-  _.get(node, "channels", []).forEach(channelID => {
+  _.get(node, "channels", []).forEach((channelID) => {
     const channel = channels[channelID];
     connectedNodes[channel.peers[0]] = true;
     connectedNodes[channel.peers[1]] = true;
@@ -40,10 +40,10 @@ const getConnectedNodes = (node, channels) => {
   return connectedNodes;
 };
 
-const getConnectedChannels = node => {
+const getConnectedChannels = (node) => {
   const connectedChannels = {};
 
-  _.get(node, "channels", []).forEach(channelID => {
+  _.get(node, "channels", []).forEach((channelID) => {
     connectedChannels[channelID] = true;
   });
 
@@ -51,7 +51,7 @@ const getConnectedChannels = node => {
 };
 
 export default class Map extends Component {
-  handleClick = info => {
+  handleClick = (info) => {
     const { onSelectNode } = this.props;
     const { layer, object } = info;
     const layerID = _.get(layer, "id");
@@ -74,7 +74,7 @@ export default class Map extends Component {
         data: Object.values(nodes),
         autoHighlight: true,
         radiusScale: 20,
-        getColor: d => {
+        getColor: (d) => {
           if (!selectedNode) {
             return NODE_COLOR.default;
           }
@@ -93,15 +93,15 @@ export default class Map extends Component {
         pickable: true,
         radiusMinPixels: 5,
         radiusMaxPixels: 10,
-        getPosition: d => d.coordinates
+        getPosition: (d) => d.coordinates,
       }),
       new LineLayer({
         id: CHANNEL_LAYER_ID,
         data: Object.values(channels),
         opacity: 0.8,
-        getSourcePosition: d => nodes[d.peers[0]].coordinates,
-        getTargetPosition: d => nodes[d.peers[1]].coordinates,
-        getColor: d => {
+        getSourcePosition: (d) => nodes[d.peers[0]].coordinates,
+        getTargetPosition: (d) => nodes[d.peers[1]].coordinates,
+        getColor: (d) => {
           if (!selectedNode || connectedChannels[d.id]) {
             return CHANNEL_COLOR.default;
           }
@@ -109,8 +109,8 @@ export default class Map extends Component {
           return CHANNEL_COLOR.unselected;
         },
         getWidth: 2,
-        pickable: true
-      })
+        pickable: true,
+      }),
     ];
   }
 

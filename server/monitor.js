@@ -9,9 +9,10 @@ function monitorChannels(db) {
   const ledgerContract = new web3.eth.Contract(abi, config.ledgerContract);
   const nodeCollection = db.get("nodes");
   const channelCollection = db.get("channels");
+
   ledgerContract.events.OpenChannel(
     {
-      fromBlock: 0
+      fromBlock: 0,
     },
     (err, event) => {
       if (err) {
@@ -27,17 +28,31 @@ function monitorChannels(db) {
           .write();
       }
 
-      if (!nodeCollection.find({ id: peerAddrs[0] }).value()) {
-        nodeCollection.push({ id: peerAddrs[0] }).write();
+      const node0 = nodeCollection.find({ id: peerAddrs[0] }).value();
+      if (!node0) {
+        nodeCollection
+          .push({ id: peerAddrs[0], channels: [channelId] })
+          .write();
+      } else {
+        nodeCollection.find({ id: peerAddrs[0] }).assign({
+          channels: [...node0.channels, channelId],
+        });
       }
 
-      if (!nodeCollection.find({ id: peerAddrs[1] }).value()) {
-        nodeCollection.push({ id: peerAddrs[1] }).write();
+      const node1 = nodeCollection.find({ id: peerAddrs[1] }).value();
+      if (!node1) {
+        nodeCollection
+          .push({ id: peerAddrs[1], channels: [channelId] })
+          .write();
+      } else {
+        nodeCollection.find({ id: peerAddrs[1] }).assign({
+          channels: [...node1.channels, channelId],
+        });
       }
     }
   );
 }
 
 module.exports = {
-  monitorChannels
+  monitorChannels,
 };

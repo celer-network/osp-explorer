@@ -3,7 +3,7 @@ const monitor = require("./monitor");
 const config = require("./config");
 
 const server = jsonServer.create();
-const router = jsonServer.router("db.json");
+const router = jsonServer.router(config.database);
 const middlewares = jsonServer.defaults();
 
 server.use(middlewares);
