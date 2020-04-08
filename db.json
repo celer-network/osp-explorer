@@ -4,2068 +4,1128 @@
       "id": "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
       "channels": [
         "0xd61e2502d5d9cbff3bd0502f6fb8f887be427502317a95bb375eac3586a7edae"
-      ],
-      "hostname": "110.49.253.216",
-      "coordinates": [
-        13.7442,
-        100.4608
       ]
     },
     {
       "id": "0xc5B57CF06716827D5DF7F1061042Baf4a03cb69a",
       "channels": [
         "0xd61e2502d5d9cbff3bd0502f6fb8f887be427502317a95bb375eac3586a7edae"
-      ],
-      "hostname": "85.176.246.150",
-      "coordinates": [
-        51.2993,
-        9.491
       ]
     },
     {
       "id": "0x18D6FaEc912d38FfD83960d470A3Ec98e6AA3822",
       "channels": [
         "0x3da47f7f11c2c62072af5b1c00fcdb854df45ba2dd73cdd723f077d77915e702"
-      ],
-      "hostname": "108.179.190.60",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x79b6380f050AbbcbCA519c9F383D5481B78C14C0",
       "channels": [
         "0x92063f054a4347b000ed9244dee53d2e8529032856982542f0fa25f98cd00408"
-      ],
-      "hostname": "150.121.254.36",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0x90a3c33851677e2d0fC153B0FB4e6262405F235c",
       "channels": [
         "0xaaae534b77d642b981b82d85a74455827b27cb57c55689d647b59013663f3353"
-      ],
-      "hostname": "78.130.97.30",
-      "coordinates": [
-        38.7174,
-        -9.1321
       ]
     },
     {
       "id": "0x84424597DE9E6b687d978165EbE304Af214D11b3",
       "channels": [
         "0x2a6fc6caa52f0a4ceb0752cd11f36eb27d48df0daaaad50eff84d291f848b606"
-      ],
-      "hostname": "150.71.233.234",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0xfCb7Fa0B07Eb1E909A49328B4C7Cf224b39abbAD",
       "channels": [
         "0x861aa46ad56a4ecb66f0faa048d911f9eb77e03c6f542888340afe82d0b93145"
-      ],
-      "hostname": "24.4.222.79",
-      "coordinates": [
-        37.4371,
-        -121.8954
       ]
     },
     {
       "id": "0xB28e8078798755a7Ad1061691592A8239DcEDdA5",
       "channels": [
         "0x9c35c2e0722f69630e67919f2f777aa90418d58c6156d7783ea9341e71ff8375"
-      ],
-      "hostname": "123.144.203.20",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0xf077446DaF84430Fd0E92c5A4de677Ef08cfA2C8",
       "channels": [
         "0xf734f3faa3f73c1c1dad3a50897b1152f7a583476e92deb0b05ba06838a70c35"
-      ],
-      "hostname": "85.199.52.197",
-      "coordinates": [
-        47.7832,
-        12.9579
       ]
     },
     {
       "id": "0x414A3F30e5BA77DfD8c34909Cc4f9Fc2D02044bF",
       "channels": [
         "0xd93464226438fa3a4e2f10e0df113651d0c20199c209da2314c4d8f8b547b8d9"
-      ],
-      "hostname": "213.253.64.17",
-      "coordinates": [
-        46,
-        15
       ]
     },
     {
       "id": "0x22Fcae43423251Ef539E360Bd7c21cb4B9Bc8c9B",
       "channels": [
         "0xdfcf659abea74e2348f33f39a4eead44c30cc9415ce44e9c56e346b9096aaa91"
-      ],
-      "hostname": "175.221.2.81",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0x936134d0cd1A9197b4c4C39a7Be22CF906359f7a",
       "channels": [
         "0x87560a8b68b28bdb877f25df54d9bb76afecbb14db362b0fc89c048fe5ee1e87"
-      ],
-      "hostname": "94.196.65.136",
-      "coordinates": [
-        55.8141,
-        -4.3606
       ]
     },
     {
       "id": "0x91Ab974Cf43351095507022436FdB46244cd8C22",
       "channels": [
         "0xf7c6f36f38273b4b9f283777d2eac804e09244d9360946bab0a5bb017b34df05"
-      ],
-      "hostname": "114.103.101.100",
-      "coordinates": [
-        30.6613,
-        117.4758
       ]
     },
     {
       "id": "0x992E3013e4ea345ac3E9d603179C2FfAC863b30E",
       "channels": [
         "0x3e8a52fff7b599c7bbb92ef22ad95cc9312beb1ccdab24c0b4a26870e9f97a27"
-      ],
-      "hostname": "63.64.71.156",
-      "coordinates": [
-        45.5496,
-        -122.8293
       ]
     },
     {
       "id": "0xE7Ee910fB55b79472BB35f9B3d99b1B4f83bDC32",
       "channels": [
         "0x62322586cbe8a7b8f43f82cd39229d138142588a58f9c19be34dd53003c80ab7"
-      ],
-      "hostname": "186.179.174.21",
-      "coordinates": [
-        4,
-        -56
       ]
     },
     {
       "id": "0xeeE1a86D414c3A294Df93dCfFd455609627203E5",
       "channels": [
         "0xdd828f2fcd826ff39d3e50ea53062b36d475431d3842f8b814cdde104998f56c"
-      ],
-      "hostname": "113.72.57.76",
-      "coordinates": [
-        23.0287,
-        113.1341
       ]
     },
     {
       "id": "0xb27F71da9a34E2eA1791B2A19244522d8e6dD763",
       "channels": [
         "0x2eb2931d2d1aa019ef069bd07df3bfc23aef644a29c7e564a01a168552ed0ed0"
-      ],
-      "hostname": "76.204.244.67",
-      "coordinates": [
-        32.7446,
-        -97.3842
       ]
     },
     {
       "id": "0xa5F19191542C1Cb67206d7a2BF65df883943F8DC",
       "channels": [
         "0x5b4802cfe94eae918f7807df33a2cfd378986388f3287f68431963ecbe392e85"
-      ],
-      "hostname": "13.105.148.224",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x361394a7a79e61FB809516CFeBCea75C325Afe4a",
       "channels": [
         "0x1c98bbaf7a0d4f488f76c59c055cbca055d9ac5f248075fe77ad113eda485a18"
-      ],
-      "hostname": "22.85.61.90",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xEA62382b4be64f83197ddF2F22ecfd5E3cAb3F30",
       "channels": [
         "0x3caf7adaea09af409bf61f24e45347c144acc23b9d9852ea37b280518e1f9715"
-      ],
-      "hostname": "151.139.89.247",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x6F731033eD5D2da68b99FfF04dD5A24EeC6C0315",
       "channels": [
         "0x29591209c878c9b3608b2ff3a6ad7707c9baf842f28283eff826798b63313d32"
-      ],
-      "hostname": "185.99.4.232",
-      "coordinates": [
-        43.6008,
-        39.7307
       ]
     },
     {
       "id": "0x8D802786D007F6F237040738657315ffF209Cd32",
       "channels": [
         "0x5bad864eb55e7b896888d2f7485fa92745057721dae24e7c18079cfc2c5cd05c"
-      ],
-      "hostname": "197.173.4.210",
-      "coordinates": [
-        -29,
-        24
       ]
     },
     {
       "id": "0xe637e180b01Eb34608A1D2C8d9386d4e94736c99",
       "channels": [
         "0xe885ea82f19710b48c4c412572e750e85e21c4dc051e0fb2719c8478f74890b1"
-      ],
-      "hostname": "62.124.131.181",
-      "coordinates": [
-        51.4964,
-        -0.1224
       ]
     },
     {
       "id": "0x077f713cA14e6f36C2625f63fBe2D9f14AbE0549",
       "channels": [
         "0x038f52673d07f41539a1dabdb5943552399476828e7667a21071bf37936f990e"
-      ],
-      "hostname": "112.211.180.206",
-      "coordinates": [
-        14.4635,
-        120.9407
       ]
     },
     {
       "id": "0x185b196d4a3E98ebAad4256C4592DC07eB53F0d8",
       "channels": [
         "0x2896dd56373aaac438b0a58ca07ddf9c5cacc37cf1ab7c36fa312f5556386179"
-      ],
-      "hostname": "143.105.108.43",
-      "coordinates": [
-        41.5053,
-        -81.5566
       ]
     },
     {
       "id": "0xB8845b580ca9d1Ed02439060c694707e5Bc1C0a3",
       "channels": [
         "0x0f552dbd4a3ab8e5bc398de6460252953322f929532194efde357f1d3d88bd12"
-      ],
-      "hostname": "194.137.12.196",
-      "coordinates": [
-        60.8683,
-        26.7354
       ]
     },
     {
       "id": "0x1c63BE82798334795f13fAB3A9623E2ffB86d476",
       "channels": [
         "0x6aef9f4f5f1ab00dbc6be09f60f01025eb4403c30d218486bfee994baa2ee163"
-      ],
-      "hostname": "118.154.21.203",
-      "coordinates": [
-        35.6216,
-        139.6609
       ]
     },
     {
       "id": "0xc8f2431E6ca2b8A482f893506fBF340c078Bdf2D",
       "channels": [
         "0x13eb233de4b7ffc83c4c9c30f6b3d7f01f45c56228f4ae6a840a09c7f01d2b36"
-      ],
-      "hostname": "121.217.29.95",
-      "coordinates": [
-        -34.2321,
-        150.6895
       ]
     },
     {
       "id": "0x9073DB6149Dfd928E142a29a307B4E59e5bC5101",
       "channels": [
         "0xfec2c13870797f456a9d2e4364344b817b6389de2fdcfc7e6b244ecc9ec657a0"
-      ],
-      "hostname": "123.105.133.27",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0x351850A21BF9f01029e4B42Cd4E713E6D2D92d24",
       "channels": [
         "0x53ec27690ed30b7c4d815e38b3755dddbc91ddb4bc81733864eceb505dc51799"
-      ],
-      "hostname": "19.84.198.236",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xa8e188e8C4CA57023F48447C1D48848af5b84b81",
       "channels": [
         "0x834aa4549fe13343f0975c8bb4980d789b2a74712bbd8b56586bca4044f4ff36"
-      ],
-      "hostname": "90.40.107.22",
-      "coordinates": [
-        48.5289,
-        7.7152
       ]
     },
     {
       "id": "0xA8AC1730baB5a65e5FF7869445082B718A68d8F6",
       "channels": [
         "0xcc72ec74d9bf4496a4a478e73fa4a8836c2c2f035a8768ff7d6861752b4bac9b"
-      ],
-      "hostname": "97.86.255.100",
-      "coordinates": [
-        44.0484,
-        -92.4948
       ]
     },
     {
       "id": "0x01D539a45cd30710133D2AF0bC8221C26518A68E",
       "channels": [
         "0xbc190981cdc7896a2a6d8646e4f12ec4368fcbbc716bb0d79248fb12f7102b71"
-      ],
-      "hostname": "41.19.233.26",
-      "coordinates": [
-        -29,
-        24
       ]
     },
     {
       "id": "0x461BA518f33c03BDa7A49fA9DaC462FEdFfD2212",
       "channels": [
         "0x56936231d73f65234c105d3e2e6e3eeb986de50f6410e69bb68ce1c78362cad4"
-      ],
-      "hostname": "112.147.113.81",
-      "coordinates": [
-        37.8728,
-        127.7322
       ]
     },
     {
       "id": "0xa07D19fA1FCd3a5dE44a6fe3A89b6d8acaC33D8B",
       "channels": [
         "0x2592418c13af23eb95f04cd85974630a70592de5e25b7411aefad35fb4916785"
-      ],
-      "hostname": "133.53.213.21",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0x0EF2FDE7e6cF870BDEEAEA2cedDA36dCe7820655",
       "channels": [
         "0x8e9fb1cea9de22fedfed887ea22dbc26901fc05e5af039997c607d4e516d0ffe"
-      ],
-      "hostname": "109.210.80.165",
-      "coordinates": [
-        43.3932,
-        6.3147
       ]
     },
     {
       "id": "0xd3571D151A3dA46A64C0E49c52609C97713A58b1",
       "channels": [
         "0xea6ae5cd44251287c4f7aed91a730bbe5053ae732d131864efa6679265860ffc"
-      ],
-      "hostname": "211.224.130.146",
-      "coordinates": [
-        36.0154,
-        128.9324
       ]
     },
     {
       "id": "0x488f316F624796b1C772eBD6d82D80b1884aa138",
       "channels": [
         "0x8c32f69813eccfd5f7058251a26d592a1debbb845ee1f34658769f9093b6e104"
-      ],
-      "hostname": "140.249.17.20",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0x0aD89079047494a2882BF9A5F7631B9F956B3684",
       "channels": [
         "0xa36711dc0f30713eca804faec887e6cde8e3f1d440b688c18d63f7374876c202"
-      ],
-      "hostname": "62.241.244.132",
-      "coordinates": [
-        60.1942,
-        24.9007
       ]
     },
     {
       "id": "0xeDb9b2D0aD2fE77EB54F436ff095d29999331736",
       "channels": [
         "0x4ff4679ca6bc63e0d129c26f61ce6fa0330e4b2dfb311334750d483d5ddbfb31"
-      ],
-      "hostname": "132.63.153.28",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xee7EC519C26AC9Dc452ee23895508342CeC05A9C",
       "channels": [
         "0xf0398e355570037688c5b0992145fde7a83c11d8acfcec40df92e31b9f4cda31"
-      ],
-      "hostname": "52.45.11.6",
-      "coordinates": [
-        39.0481,
-        -77.4728
       ]
     },
     {
       "id": "0x8cb1d353D6671156d75e1A8Dc62B5577e1a0744B",
       "channels": [
         "0xf29ca1bd2d48e971aa2f8f6e208bc6027edfcfa8c8a606018d0b3336ff90a150"
-      ],
-      "hostname": "150.225.137.225",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xCD5fa7e4D9509FD0A284a121aAbDCb2795350178",
       "channels": [
         "0x0074aa36da60984c7909b34c97a4124775eb6a99b77c150fc42467bbebf55e45"
-      ],
-      "hostname": "4.82.58.173",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xdD8001beF2254BfA51050b78a1d8538733f7cc8c",
       "channels": [
         "0xe71937bcb9f73c983a0dae43b11b9848f057d8c50b410e161404145ef1600800"
-      ],
-      "hostname": "186.130.183.251",
-      "coordinates": [
-        -34.6866,
-        -58.5571
       ]
     },
     {
       "id": "0x1bb0359f35cA6d7cEd7C0C1aE4dB0cB793659263",
       "channels": [
         "0x1ef53e4de3c38fb8890beb3c02acc17c6a4d430fe5d89d0ecc9a2b0f6219c1d9"
-      ],
-      "hostname": "95.94.116.249",
-      "coordinates": [
-        38.7905,
-        -9.3215
       ]
     },
     {
       "id": "0xdF7b1EDD61bD5ED38D0f63da64245eaE5d6c5c76",
       "channels": [
         "0x4b3905773e60e03ebeb11847e2d15b7a01c20c3319424753b6931a752184378e"
-      ],
-      "hostname": "220.75.141.250",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0xb68D0D73bfbfAB6763f37D15d9b1d1072dAAf78e",
       "channels": [
         "0xabe0abde8ad76e5742eae3276e033089e2bec3201d32f763319291027bf92c8d"
-      ],
-      "hostname": "117.188.205.83",
-      "coordinates": [
-        37.1075,
-        79.9355
       ]
     },
     {
       "id": "0x45eCBE761E8033fEd7381dF24Ae985F0c610366b",
       "channels": [
         "0xc41c4f98b2adf6b4b96e5b0f1b9f1c425f9828e918e5a7a5f4ebd0ae23e53927"
-      ],
-      "hostname": "214.84.42.14",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x1F0Bf96FD743b5385E906A92d72322Cd6efa2770",
       "channels": [
         "0x24d51fa601049224545eb8600db6f848ec785c4460a92e34eb5d1ba4f5bae90f"
-      ],
-      "hostname": "145.51.227.99",
-      "coordinates": [
-        52.3824,
-        4.8995
       ]
     },
     {
       "id": "0x61C47F2cdc3497BdB253B064d07B9ecD2A97CB67",
       "channels": [
         "0xe0e496d7637c961d6028e0cb10aef51a36dc1015a64bae305fa36516d6650ddd"
-      ],
-      "hostname": "97.101.65.205",
-      "coordinates": [
-        29.5554,
-        -81.2207
       ]
     },
     {
       "id": "0xA858ce37351d1b0cD85497EcD16e904EC4578f3C",
       "channels": [
         "0x175b6f1590b61bacdf4e6e5e2ec2d46132dc282dfbde4374c8fd5d1b4be2e5f6"
-      ],
-      "hostname": "12.134.34.235",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x79900D554f360618cF3Cd0fba2bDeE18881f08a1",
       "channels": [
         "0x474af6a5df44c4f42fa465bc7e14bd63268f897f27825cfd22cffb30f87e86f7"
-      ],
-      "hostname": "205.16.88.10",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xdad601873ae3B39c8e2F86894785CeCe9b38B60B",
       "channels": [
         "0xec82e9ace0e2ade49aa21a81aa67dfbaae21e58126346560405412dad9f5a50f"
-      ],
-      "hostname": "9.185.58.12",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x217917eE19a74945b56Aa1d6Ff7Ab81862930819",
       "channels": [
         "0x9d094fd84cc7bd67899b39f53b31723d934e51c7f229d56bc8d458880f80b910"
-      ],
-      "hostname": "222.227.199.8",
-      "coordinates": [
-        35.6151,
-        139.7104
       ]
     },
     {
       "id": "0x2b776C3240a1e09E899D6De20D2FfFeb0A3e7ff6",
       "channels": [
         "0xd95907a4f659298220fcf6da87b0e6cbcf13bff61aa413a352bdd4d5aadc4da0"
-      ],
-      "hostname": "199.64.127.22",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xE37631CFc05Edc8E259CCB71e85900CBF7251DE4",
       "channels": [
         "0x4331efa679ebe32d99f07dd1da9b52a4ae63c862fb6c5979c0f6bfda7f5ddb33"
-      ],
-      "hostname": "69.190.111.212",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x177c52969044b38a77604333c1714b9c4EbbFCEB",
       "channels": [
         "0xdcad2a73e03b9d7a30600990d0ce7259f75ab56d02144739deafc13c5a8491de"
-      ],
-      "hostname": "145.104.92.221",
-      "coordinates": [
-        52.3824,
-        4.8995
       ]
     },
     {
       "id": "0x7610f66157262e741Cd3330d7F34A5CcabD4d166",
       "channels": [
         "0xd4e0283a4e55936a86bd229309f3b620b6f199caae63af2ea702649cb3bfd3e4"
-      ],
-      "hostname": "92.48.113.92",
-      "coordinates": [
-        51.4964,
-        -0.1224
       ]
     },
     {
       "id": "0x477000FC89cd444316C6580e9eb52fd6092E5DF0",
       "channels": [
         "0xa3d0ac0f4521a6c3b5927de8a0c5f817344f99e2653067fb4a731c126eea6a81"
-      ],
-      "hostname": "69.159.207.110",
-      "coordinates": [
-        45.4336,
-        -75.6825
       ]
     },
     {
       "id": "0xedBDE1B85bf9e7734EB72B3ba0Ff0997EB6Ed731",
       "channels": [
         "0x15702d5e6b96cf8e7d92af66546b850b167b761e8969a01d819f0c2b423e8258"
-      ],
-      "hostname": "111.24.161.180",
-      "coordinates": [
-        45.75,
-        126.65
       ]
     },
     {
       "id": "0x5cD1A3EaCE4a75Acf3E8B4f269cAeA479e50f1fe",
       "channels": [
         "0xc9339ae09e506ad23dc419496364c1436f23a24e73b82111cc90876321277b86"
-      ],
-      "hostname": "108.63.107.30",
-      "coordinates": [
-        52.0269,
-        -113.9507
       ]
     },
     {
       "id": "0xef19B3551b29bF199e760517e881b54E7E254D80",
       "channels": [
         "0x645e29452408d80a1a4de780fa0ad7bd82fc500c1ed6a4bd14a89893cedd67ba"
-      ],
-      "hostname": "183.250.97.157",
-      "coordinates": [
-        27.9983,
-        120.6666
       ]
     },
     {
       "id": "0x02104721F952107A825bE1CAb82Efc4bB20bC4fE",
       "channels": [
         "0x5a4170402493a26fe844efab22808e46589a357af3c6e293b7a61bae60cda4e3"
-      ],
-      "hostname": "63.211.129.204",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xA38AC36d16c2944b0F6eCb1E5515244fa5Db45Dd",
       "channels": [
         "0x41819e740db6854339736187a594673b4091646a4eaf984755c75ff0ac77b2a7"
-      ],
-      "hostname": "129.153.85.153",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xf2368402Bf728d39e985f6Bcfe59B0BAf833cB33",
       "channels": [
         "0x0da5219608d0984e14e43cabf3c0ea5bd7ba3a1585322fb622337037d9e73d77"
-      ],
-      "hostname": "180.124.179.138",
-      "coordinates": [
-        34.1809,
-        117.1569
       ]
     },
     {
       "id": "0xa13143859B2db21E48073565B77f87Ef040E7811",
       "channels": [
         "0x45d0762861a53e1efa7050d6a69056f6b11b0e9e7cdd913a3f8c239ce94f9e27"
-      ],
-      "hostname": "54.67.209.156",
-      "coordinates": [
-        37.7751,
-        -122.4193
       ]
     },
     {
       "id": "0x43890CC13AbE0e4A861f1Eba7aaf18f1d70C78B9",
       "channels": [
         "0xa1f85525954b2b3aad78ace7435ed2116e933aed35798c02d073ad2e9c2df2e1"
-      ],
-      "hostname": "149.252.173.142",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x25047AF7237bd3B62c8270Bc303bebA6c6a11b95",
       "channels": [
         "0x7aaa4cb8f8194f53b65db13b8ec839f4c6e92e2822318f17e88d159cbd7b9e05"
-      ],
-      "hostname": "171.90.31.135",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0xC99Ca2977410B07F68083DE7D74F107bA21E42E0",
       "channels": [
         "0x0640d3431e814eb56911bd5ce8f663be9f397062ff1e3740ac3acd7cb805e502"
-      ],
-      "hostname": "189.128.91.159",
-      "coordinates": [
-        17.9732,
-        -92.9296
       ]
     },
     {
       "id": "0xe8931fcF11f78F4575647DEcA6A4AF3699854645",
       "channels": [
         "0x6af0d75a071692bb93cde6a5576b085dca56c4dbc93ab34969a177cb3aa9d3f9"
-      ],
-      "hostname": "69.51.213.217",
-      "coordinates": [
-        46.3334,
-        -72.4324
       ]
     },
     {
       "id": "0xe30474F14fff32082ca23d99A89396F134821489",
       "channels": [
         "0xb853d36e036d9d367571ae6fc318a6f6d679660a2263760abf4ab79bcbde607c"
-      ],
-      "hostname": "214.155.148.2",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xc701249AC134fbF412E21a25a9EB5398FEd0db5b",
       "channels": [
         "0x40b7a1aa4492ac5181b5a9750525d4807c20ad23058ca62bc763d7af41f495ca"
-      ],
-      "hostname": "91.5.133.141",
-      "coordinates": [
-        51.867,
-        10.6782
       ]
     },
     {
       "id": "0x907F43b624e145B83D5d778683C29F609A954Cb5",
       "channels": [
         "0x6207f952b76df98e96d07b1bfb280f359ca15f4b864e58e7417748b59ba52408"
-      ],
-      "hostname": "174.185.76.75",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x1d45e2dEF7337e8eA806fA4e75f7507EACb793Ba",
       "channels": [
         "0x0090d30c8ed3fcd1b658b6c3fc19df68f60e21946203757ab720ac30774107f6"
-      ],
-      "hostname": "204.56.13.191",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xC407CAdD8A10414932cd45534b440CA2e678Ecf5",
       "channels": [
         "0x0165770eea3635c33d56174a49d23aa657962b4dcd7f48b251b119a333d7b689"
-      ],
-      "hostname": "36.71.215.163",
-      "coordinates": [
-        -6.1741,
-        106.8296
       ]
     },
     {
       "id": "0x34Cb107fC5127Bb776236dE7da4EEB79C4d60dB8",
       "channels": [
         "0x8f1f35a50291624d94342b705b9fd2581ed0bc61295e2c6ba0f3b88f25e79a76"
-      ],
-      "hostname": "93.75.78.130",
-      "coordinates": [
-        49.8094,
-        30.1121
       ]
     },
     {
       "id": "0x7670773BFd1cB289B04EFeedDb0db5457AE95425",
       "channels": [
         "0x334eb20566bed1aa910e72b24c38b8a79e784ee4f4905291d05aef3ee18b5787"
-      ],
-      "hostname": "89.43.216.239",
-      "coordinates": [
-        35.3144,
-        46.9923
       ]
     },
     {
       "id": "0x57EF70E995b9E0a3A426c751C520d0B8d405437D",
       "channels": [
         "0x59055311f7c8e1da23e28f9f6bab0267bd5bef4b9d868ec7f8d1642f2d12aa1c"
-      ],
-      "hostname": "153.185.0.11",
-      "coordinates": [
-        34.041,
-        134.574
       ]
     },
     {
       "id": "0x1D30E49A4b9a04E1a6a250D445A181738eaB9e86",
       "channels": [
         "0x0552f35259f18b73501fe354f27332536c4412c36382d4142b314f26c9f034e0"
-      ],
-      "hostname": "29.70.156.77",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x7A9cEF6849165D3D97abDeC42E5ed126bba61964",
       "channels": [
         "0x01bf542fedba54476462a92940d44fe31463298891c957a60824b2c18000d895"
-      ],
-      "hostname": "78.255.242.220",
-      "coordinates": [
-        48.8582,
-        2.3387
       ]
     },
     {
       "id": "0xA9b74a773D254918A69bc0d8766F749d45cE2F58",
       "channels": [
         "0x11cddde4ce09b1e3fa18f9070e9a003a853272e7b0d5db3c789368c2b375e254"
-      ],
-      "hostname": "216.233.113.99",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xc42f98E9e9d2f834aCf0A85aE542634B8c861C9c",
       "channels": [
         "0xfa6045f89b17ffc77aaea2809230deb11ab2d055d1665fea4422b1071dbf1fa8"
-      ],
-      "hostname": "30.216.245.35",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x569Fa618a4D8815AFee0d361Bd2B13b0cED9A0cc",
       "channels": [
         "0xaf37566dda1029367e9c74069fa104ed62fc75cb36780b03b1a1e9d3a50d73e2"
-      ],
-      "hostname": "176.216.141.174",
-      "coordinates": [
-        40.4437,
-        33.8535
       ]
     },
     {
       "id": "0x38e89c4e6297bDFd71fAe5bAbEb8cC976fBD07DE",
       "channels": [
         "0xad0d92a75076a6bb8e8de1f8f32521f71cbb2e858d1081549244dacd43e85ea9"
-      ],
-      "hostname": "136.29.252.249",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xA8f05886585dAba2Ae102971a6bE78e011354644",
       "channels": [
         "0x8b27d51ca3b16ced6120a906d369f0f3a9c81223b353d0ac5ece2c302988d0ee"
-      ],
-      "hostname": "88.91.169.249",
-      "coordinates": [
-        60.2875,
-        5.3077
       ]
     },
     {
       "id": "0x2fBf16a3339231A991438a0Ec1a486d6F8f6f7A2",
       "channels": [
         "0x5351059f2bfacab6c8954b44edc6f54a3e236a04be65e630f60d689aae0d5dec"
-      ],
-      "hostname": "173.189.8.233",
-      "coordinates": [
-        33.9739,
-        -81.2345
       ]
     },
     {
       "id": "0x4d553Fe11DDf97c468157bA773e985556EA754d7",
       "channels": [
         "0x6bfb579ad36d0b43134c0a1a3eae5d7bebf45f5377bd686898d1375942dc58dc"
-      ],
-      "hostname": "210.144.34.119",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0x926e67406354037841A8F89455Fc26c6186d3489",
       "channels": [
         "0x11e62bb2147fc60f6cd62e496e588181a0f1dae0abc897d24095d6a7234ef78a"
-      ],
-      "hostname": "171.233.147.161",
-      "coordinates": [
-        10.8142,
-        106.6438
       ]
     },
     {
       "id": "0xd200Fe24646C2Ad95a48158D8d88916D568ea830",
       "channels": [
         "0x9bbd9bad1cd34fc7cf760a722fd52eebb6340cc2818e805102bf17bc133a45c2"
-      ],
-      "hostname": "98.234.79.135",
-      "coordinates": [
-        37.2808,
-        -121.9572
       ]
     },
     {
       "id": "0xcA56371CD87eB7694F95F71AB52B5B4d531a92f2",
       "channels": [
         "0x141666f46158bca018d6a9dc5953455041b9c9ee1d51a733dc79098fdd71e5c7"
-      ],
-      "hostname": "221.40.211.133",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0xA9F72B9B3314af674ddA47C4EEc0040F5F0512F2",
       "channels": [
         "0x3386e7be56c3961363a84396ad3b25ebbba69f63b83946812f67620f0e54e203"
-      ],
-      "hostname": "9.77.251.121",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x4a8cb0347D439BA6BEA0Ec1E981AaD88b8658b42",
       "channels": [
         "0x89d78a1b330aaf6317369498aa0090d7be19cd4b9acbe3eb74ed5fcc67b0c482"
-      ],
-      "hostname": "31.198.120.16",
-      "coordinates": [
-        44.7008,
-        10.6304
       ]
     },
     {
       "id": "0x6D91A1c909A8B74fdCbe576396d192accceDc5B8",
       "channels": [
         "0x49b599ea0538ed6764d2ac5300d68dcbe094661a1a2cb6b781db620d50da463d"
-      ],
-      "hostname": "163.97.1.168",
-      "coordinates": [
-        48.8582,
-        2.3387
       ]
     },
     {
       "id": "0xBcEFc87297B1336098004B0B377Bc8cf233e6a84",
       "channels": [
         "0x7323093c730dfb921b553be01d4d477d4d08e1be84d7f5c02ab77f9e77a617c7"
-      ],
-      "hostname": "45.66.149.138",
-      "coordinates": [
-        50.1188,
-        8.6843
       ]
     },
     {
       "id": "0x23B79c0791AC83a2EAF89220fF3BB881c4aaEE68",
       "channels": [
         "0xf9f91302210b007a8cd2e5d70c7ee2e30364fc3ee5ca0e4abbc40d9a6718f0a0"
-      ],
-      "hostname": "69.52.128.253",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xF143483Cd9c6379d744d8EA272E6Bc58CFd0324f",
       "channels": [
         "0x9dcf5561c394c521430f6b27836bcca7fdb62edcca0e9cb78ccae418364abb0d"
-      ],
-      "hostname": "122.81.45.143",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0x1584D4BE9B4d11fB6f590c3F74799c2392CFAe5f",
       "channels": [
         "0x343048a536f4d14ab339110cc0f09b17b6edbe795397b9c9cfd2da96d81fb7e6"
-      ],
-      "hostname": "189.56.241.60",
-      "coordinates": [
-        -21.2125,
-        -47.6119
       ]
     },
     {
       "id": "0xdB6499eac7c74C2924A881A24D5D6E7a063A5bAc",
       "channels": [
         "0xb20b9efdc8309be6d16563f17cd34977ed25dd94726fb6dc3258b47e4617155c"
-      ],
-      "hostname": "51.250.161.81",
-      "coordinates": [
-        51.4964,
-        -0.1224
       ]
     },
     {
       "id": "0x1F3881aF35E14D1791704aFdC35F331E1227EDDD",
       "channels": [
         "0x051847b35366b1857f3464652537a8b45c6363cd8602fe35037f05540382593f"
-      ],
-      "hostname": "203.188.157.216",
-      "coordinates": [
-        -33.494,
-        143.2104
       ]
     },
     {
       "id": "0xbb21c09725A5a41CC4BEEC3CafBC0FA35f9d51f0",
       "channels": [
         "0x26bc694e12858419240a2d7800365f691352704a12aab53cc859e786ba041990"
-      ],
-      "hostname": "43.72.223.104",
-      "coordinates": [
-        -33.494,
-        143.2104
       ]
     },
     {
       "id": "0xD72B02E65cdCfA557AcA6daE7C06949fAf1E4196",
       "channels": [
         "0xea8ee804cdeb60624a6628601d5b8714910ea1aac1fcaa758392544441820187"
-      ],
-      "hostname": "16.172.170.122",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xb61824A63C718BD9dE69be2F56206E87C808a168",
       "channels": [
         "0xa316d04f9683ae1192c86bdeeb9372ecff25fbce143842e6aef39daa14138ced"
-      ],
-      "hostname": "79.172.106.237",
-      "coordinates": [
-        55.7527,
-        37.6172
       ]
     },
     {
       "id": "0x72cd02Dc1Ebf8B929F034317975756b26897CC45",
       "channels": [
         "0x9d3563040230822a633b15b6630e69fc1b8995f3ea7c12b404115e96ddb211be"
-      ],
-      "hostname": "115.204.162.235",
-      "coordinates": [
-        30.294,
-        120.1619
       ]
     },
     {
       "id": "0xda41C6E1F1279c1Bb6ce6F4cC1e4ec1dA6a411A2",
       "channels": [
         "0x9ad6db5a4cbbf53bbc281ae65da7928c72b299ffb3f274e395049c4d9ad0f2fd"
-      ],
-      "hostname": "38.127.83.118",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xCa12737bcaCf75bF0BeC1e5588Ac39515De575dD",
       "channels": [
         "0x24e0e51c3e4cf231d480c87aa6c51b02784089e4224763bae8a612491eaa6137"
-      ],
-      "hostname": "3.166.154.127",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x9926F2102D6702df034A2e666DbDd25191d88353",
       "channels": [
         "0x227deca7476bd5104e4144038ed9bea3df239da940274639d49a0bf3c5f60b02"
-      ],
-      "hostname": "16.10.109.147",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xdc0BdD26eC1D09d61e9d8fa6ab971dB4adb9d337",
       "channels": [
         "0x77e103fa78156862cfe8cf660bbdb4eeacf2716a3190c135d80bcbb616cfc9bd"
-      ],
-      "hostname": "96.40.0.28",
-      "coordinates": [
-        40.7128,
-        -99.0783
       ]
     },
     {
       "id": "0x5daE178b10bda53eCBb12720a751f52580e14f5F",
       "channels": [
         "0x4cdb9c37b965d34e9aa7af7353dda84ad1d7cdc8254ca9366276087edd125c00"
-      ],
-      "hostname": "140.181.114.241",
-      "coordinates": [
-        49.9214,
-        8.4825
       ]
     },
     {
       "id": "0x21CDf7da58CC5f3b023Cf249BDab6208eAbD590A",
       "channels": [
         "0x5d80df3260c4bd1348a2c7106cdc11d407224a9cdb75e307dc58b64078c11421"
-      ],
-      "hostname": "156.153.143.8",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x5d98D990Fb0F90C2658F403603790e976A32808E",
       "channels": [
         "0xc323a04b6ef598e0c1e21c64ab456faf00ad205e15b89b4c85c353e1cb9c7983"
-      ],
-      "hostname": "180.211.208.118",
-      "coordinates": [
-        23.7018,
-        90.3742
       ]
     },
     {
       "id": "0x3F59877A9857F4D82BE2346B093A9DcAc6A771ff",
       "channels": [
         "0x493ce0a6b96aa9d19ca7ff4aaf4c8ad753632dfe3f089a5efb22efb6dcb8b753"
-      ],
-      "hostname": "114.69.108.126",
-      "coordinates": [
-        38.6981,
-        140.1845
       ]
     },
     {
       "id": "0xdb9515210231E3EE4b7A8CDB6D03c2B121DF2a24",
       "channels": [
         "0xe223ab950e706bf1350e3c442a5a1bd19c39df08a3ad7d86edfdaecc3445fe4d"
-      ],
-      "hostname": "30.155.77.10",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x4bAcE345C30D9244b71218Dc6ca694836138b60E",
       "channels": [
         "0xe35bc89a17eeddff0ee4d23f18df14ae062cb4645e1e8319bc5885c18e1cc7ca"
-      ],
-      "hostname": "64.41.203.154",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xa4dA9c5780875614F45EC18023a868Eb313144C1",
       "channels": [
         "0x0006a8f19fd6c6ad6b8fef3e44a548df667bb5309cbdcc6affeee5d70d5903e9"
-      ],
-      "hostname": "45.48.251.19",
-      "coordinates": [
-        34.074,
-        -118.2611
       ]
     },
     {
       "id": "0x1f7402f55e142820EA3812106D0657103fC1709e",
       "channels": [
         "0xc1deb51791076540969bbcf01fe8cf4dd5fe5e73bd462db4438f2479d5e17824"
-      ],
-      "hostname": "199.234.41.213",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x1552869d327175Ebf98377756ebde3d7386f04c8",
       "channels": [
         "0x15dddd90c8c004e31ed9feda4a3715660597b8893e11f8c2a8eee98887b2151c"
-      ],
-      "hostname": "207.40.136.193",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x9375DB8E9451b2BC818A76f81FB6d180A185544e",
       "channels": [
         "0xadc0f7ef83f23fb2c0af670bbda5ce27e1159d9c2ab7d2db8a8b3a226193d507"
-      ],
-      "hostname": "41.158.63.119",
-      "coordinates": [
-        -1,
-        11.75
       ]
     },
     {
       "id": "0xD77Ae89dfa2a649A65baC66768556b5c440a6Fe7",
       "channels": [
         "0x40096a2d86abd4940c4398e5bc68c4eb04fb5cc4a560e26301625415020a6b42"
-      ],
-      "hostname": "155.17.89.14",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xF006F96b83f36e5a8834bF2a78a6cB4573a59d6d",
       "channels": [
         "0xd6e602f3cc9c3bf38c83e80ebed9421ebf8b968c24f00eb73906b6d910fdaae9"
-      ],
-      "hostname": "58.238.229.175",
-      "coordinates": [
-        35.1003,
-        129.0442
       ]
     },
     {
       "id": "0x0e6912B74543C18110b21d038783ac93d9C632d1",
       "channels": [
         "0x54b1f1d00841cb173cc0773d62705c52f535063e07092811ac9166b2856ac6e1"
-      ],
-      "hostname": "111.168.162.223",
-      "coordinates": [
-        38.2295,
-        140.893
       ]
     },
     {
       "id": "0x6e6316792D2a15C33B6c912De4b6baecF3100130",
       "channels": [
         "0x63452546836f3d6017b1b7fc2726200d2d5bfe3ed85b126bec6f5934d48ce926"
-      ],
-      "hostname": "51.6.84.40",
-      "coordinates": [
-        51.4638,
-        0.1434
       ]
     },
     {
       "id": "0xB7e81Dee8940e76C6829C979817f3a2400e02fFA",
       "channels": [
         "0xbc520f8dec11ae91e4e96fd80ed26746f396ac90c8ac62a897f1e2e63b5d7920"
-      ],
-      "hostname": "217.51.237.52",
-      "coordinates": [
-        51.2993,
-        9.491
       ]
     },
     {
       "id": "0x586e5972C15e4df5F579ddBcC7Dc2B6BC875FEB2",
       "channels": [
         "0x14b9287f8db08a3c8e3ce37ea956a91fb46dbd6be1b8857ae7efbdcf8d963fd8"
-      ],
-      "hostname": "23.223.70.122",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x97F5f8d374bd5273CD092CA0D20b95750A9f3DfC",
       "channels": [
         "0xf998c79e3d5736da2dfe000f8c5310ef6285727c923d3a2ebd51a028348c0a49"
-      ],
-      "hostname": "167.68.193.150",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xceE957336C0542591677E50bdCAb2d267ca37530",
       "channels": [
         "0xcd34d91fccb51d62a1a958d6127b21c1c640ab78541477ade9d9d2b69a10c783"
-      ],
-      "hostname": "5.205.193.195",
-      "coordinates": [
-        41.7322,
-        0.4372
       ]
     },
     {
       "id": "0xCE5A001D3F7875c42315183dcA1257550f5F68a0",
       "channels": [
         "0x6a0fd6fe8f742a0e8e888d93d0f60f58eadf6083447befc9ce7ea980c0c22a20"
-      ],
-      "hostname": "139.144.101.3",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x999d87a6843DAa81159F616c74eE0c2E0441BFfB",
       "channels": [
         "0xbdcca3d09fb5f9a84afec97d453f74ec9794910e6fba068824980304d9c82362"
-      ],
-      "hostname": "209.71.25.13",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xfadAA0F682883E4E14ead1a2e261b6a2F44D08b1",
       "channels": [
         "0x4af8f6c602b8b76f57e282ecb7b628fb4d9971b136edce7931be8cccfb362594"
-      ],
-      "hostname": "196.170.78.122",
-      "coordinates": [
-        6.1316,
-        1.224
       ]
     },
     {
       "id": "0x9E61Cf68996f62Ed76A512B323Ded55a3B91D500",
       "channels": [
         "0xabe3198313764e4a19819eff04b6db6ea5ebed0ffd136e97928de24986366be4"
-      ],
-      "hostname": "157.125.141.62",
-      "coordinates": [
-        51.4964,
-        -0.1224
       ]
     },
     {
       "id": "0xF78C39E16a5471216A34E4bba545A5c66611963a",
       "channels": [
         "0xcfe7ff931730f6921f630c0222b05ea1bacf58891bd5ed3a5ac02a259490cf36"
-      ],
-      "hostname": "158.32.91.106",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x9314Dae4E07d4166b66a336ac673B6c304121D11",
       "channels": [
         "0x29a486582463ceda3cb808f9b7f195648b79f9fa71a00a67c3bcd269e8c731e0"
-      ],
-      "hostname": "153.61.27.90",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x9523cD1c267411BD0FdE751c4b0eD2b28fe9c721",
       "channels": [
         "0xd9d9b64407a924396f3697378a365c9cc6ac735b47f1794df38d156385dea2a2"
-      ],
-      "hostname": "18.63.229.61",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xF5e9D550C3c50364D630eDB4753bE404Cd109121",
       "channels": [
         "0x45c5a2f1010d3684bb0f077295be1d20deab8a04ac61b0ac5b23cb63e709b058"
-      ],
-      "hostname": "14.106.9.31",
-      "coordinates": [
-        29.5569,
-        106.5531
       ]
     },
     {
       "id": "0x0539cf653a59Ba79E389f659C17d9e98958DddDE",
       "channels": [
         "0xec7b80d89265e4b0a345e051bf77ff2da2f220caef52980a8501114ab978a669"
-      ],
-      "hostname": "164.204.102.208",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x96e2bE69822fF4Ae73d2cF053C1D6f075835c319",
       "channels": [
         "0x260bcf003cea854ac52af12f5e9473ad5cbcd4a3c7aaffab27bc8179e08e5286"
-      ],
-      "hostname": "8.31.209.208",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xb67eEB920E533a332be04Eb4bC257B8cd8796bbc",
       "channels": [
         "0x06ca932bd225760bb07dc2fe09247c548e6809cf758d03b575f6b3cf4e37f21f"
-      ],
-      "hostname": "208.110.172.126",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x2D300a1c2dA04BC914B95bB12C7AF54cd564acE9",
       "channels": [
         "0x97f397642d3c82f8e376da2bc9e608b64d0827a65b2a3ef33c4ca93b373ec7b1"
-      ],
-      "hostname": "150.209.169.90",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x2f267A8fd19F18EBB67d465e3D5760DfEd2381d5",
       "channels": [
         "0x365afafa9120933e81bdd2c585cc602c01faa078f81f8d05d9efe523fe9affec"
-      ],
-      "hostname": "1.70.223.190",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0x1f632EA455b73490D7211dB38AD36136fc9121A2",
       "channels": [
         "0x5b44d0397ff88fc67a21d782a58aa8fd8c0792fdd6395c0fea46d7e8d340cb30"
-      ],
-      "hostname": "47.30.102.117",
-      "coordinates": [
-        28.6504,
-        77.2372
       ]
     },
     {
       "id": "0x5Eb343991ddBa0D6c497955FE578Ca7f9C7A15E4",
       "channels": [
         "0x035bead7778e378dbcaeefa48890add8fe04cc25354e00525951872eb845db98"
-      ],
-      "hostname": "165.129.51.79",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x5B9cE8aa9686D1864e090821dFDe521e5f63A198",
       "channels": [
         "0x1ae0a25a1da00ce6018367058df8abd4c5f18b48f5c32b4d834c80a7d9c89ab1"
-      ],
-      "hostname": "64.115.237.171",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xd04CD20A22DF7a8A3e0E3D052C3E027F5926913e",
       "channels": [
         "0x3852dd00bbf7a675c8bd5998c804db15afde2a58a1f48ff1a17bcd9213c11f01"
-      ],
-      "hostname": "168.233.63.166",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x26f87f47baA59a0A9BA9a483B9a8932Bb325180E",
       "channels": [
         "0xc4c81527732aea3eaa0fa4c5441d18919d1b5675d7e4598a0d7c85cb69496b02"
-      ],
-      "hostname": "138.231.74.227",
-      "coordinates": [
-        48.7967,
-        2.3338
       ]
     },
     {
       "id": "0x522A10B9f192B7447106b2d07d7676436f468566",
       "channels": [
         "0x25c390fb7af2ab6ba051c758103bd3ae6675a8a344da2ee2c74239c7f596b035"
-      ],
-      "hostname": "130.252.16.106",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x499017655c5e64b4a183BEEF55c26abE3978d4F6",
       "channels": [
         "0x01b38536b98d497debe0bb569a2781efbf430960c1e0f75f96ca57433e030cee"
-      ],
-      "hostname": "121.63.204.160",
-      "coordinates": [
-        31.7047,
-        112.2561
       ]
     },
     {
       "id": "0x4D1C5F6b5898Ad4328ED760EF786828FD193f758",
       "channels": [
         "0x90e66410c8481442ddb42b56d3c2649ddce0dd1ebf284f0724a90a9b29254b72"
-      ],
-      "hostname": "85.120.96.228",
-      "coordinates": [
-        45.9968,
-        24.997
       ]
     },
     {
       "id": "0xF40E83E70011881bd0Aced05d84A077B81781D41",
       "channels": [
         "0x0c6b272f1df38ed1bb8c51d2f81235b7a3bc5e6c07843c7371a41ef9e1980b29"
-      ],
-      "hostname": "166.103.126.175",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0x34AF8e549b39153E19B0f7f9fC509F69E43C1fED",
       "channels": [
         "0xeb8990b3fab067b33cc5d6ecee359c44c1a4fee4c8441c3b500b216bad4242ec"
-      ],
-      "hostname": "78.139.9.19",
-      "coordinates": [
-        46.0833,
-        18.2333
       ]
     },
     {
       "id": "0xaa225C80626E3606d23d9ECAe3b40fdcFBf161E4",
       "channels": [
         "0x7c11aab7867d9261eaf81c093d5188419724e6d289be56c414fb11eae0d94519"
-      ],
-      "hostname": "72.227.19.36",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xcd8A25fF5bBcAb05F8083fdE102687560464b8e5",
       "channels": [
         "0x1a2ec25f495c84ca4ca1c3a8c74c52d5e1e56fd0f98fcde28f691c456342ccc1"
-      ],
-      "hostname": "111.212.70.120",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0x74A0F510b6Cc506E649A23c3142A3A0cD3Ca9d0c",
       "channels": [
         "0x84bb63e16025e5dd8e96c22e0d126d7cf13285a4ef2f6c13dd11ebcc600b1a61"
-      ],
-      "hostname": "34.220.149.196",
-      "coordinates": [
-        45.8491,
-        -119.7143
       ]
     },
     {
       "id": "0x73077ac1b40B13b7A70CdEf3333DEf1A2Cc60565",
       "channels": [
         "0xf638f13d0a5fb5cb1976e188bfc8271846fa25c345f35aec480f0814fed08be3"
-      ],
-      "hostname": "116.207.58.142",
-      "coordinates": [
-        34.7725,
-        113.7266
       ]
     },
     {
       "id": "0xF09EadE335D1CEa97ED22436bD8B1d2df7AC6674",
       "channels": [
         "0xa51d0a5b3bf1aa5d444fc2d737a2be1d9176bd20beefc575cc5852d1c5c73a6c"
-      ],
-      "hostname": "152.210.118.146",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x475E66EC98AE099aDA8920Bf31B5146604Bd8f4E",
       "channels": [
         "0x3fdf56d89e2cf20037e930bb0c7c7a5586a186a2b5e598067a98e17a30dcd92c"
-      ],
-      "hostname": "32.149.118.55",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x7e7F5ff04E66402ffd97ad169C4B52E1E793B0b8",
       "channels": [
         "0x25ecb2e94ecd3cf4bf5f9c8f186d6f68ba2b5bfd185c34ca1628e4542a160364"
-      ],
-      "hostname": "193.79.26.210",
-      "coordinates": [
-        52.3824,
-        4.8995
       ]
     },
     {
       "id": "0x7FFD13337D1D9bCCe6CBFFE1468d1F7C8694b4D7",
       "channels": [
         "0x088187f56034604c667917a7d66a6c59809f213baeb7dfac324e7902eb67040b"
-      ],
-      "hostname": "5.27.187.195",
-      "coordinates": [
-        41.018,
-        28.9745
       ]
     },
     {
       "id": "0x32C8afC90aE89A6Acf7A94C953F99b71b415a406",
       "channels": [
         "0xb7f684376eb39a238b2ee8c3a1f4be87bde41661515f9d39db73f879856bcdd4"
-      ],
-      "hostname": "215.113.41.53",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xEB57444e80D466a5DE9BaB372c4E3a0B0B5CcFA3",
       "channels": [
         "0xde092d423280ea10df6c8da1b09ff0ddd6ee11ace19e78e0e7fbed9fc37bfa1c"
-      ],
-      "hostname": "202.8.182.157",
-      "coordinates": [
-        37.5985,
-        126.9783
       ]
     },
     {
       "id": "0xdF7B69C22B96F2C7e07687971551021058260451",
       "channels": [
         "0xc9092ebbbaa25de6ac3b076543bc9d415314bfbdb964cd05cc0f8dd0ed580c40"
-      ],
-      "hostname": "19.194.56.231",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x6fB7A37B3A8A2861eeb3E02E60b682dCD2d3c005",
       "channels": [
         "0xa77706da6c97caf53f22f8e84589c336a3f2b11d432b05d9d48d606431cae67a"
-      ],
-      "hostname": "122.33.18.89",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0x9F6B03Cb6d8AB8239cF1045Ab28B9Df43dfCC823",
       "channels": [
         "0xbe286b58d0a9559b90e74573d053730951bc909a7c41e928001a347ee152b9d9"
-      ],
-      "hostname": "39.22.28.43",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0x93EdD68C3824e97647d77F61430F3d9cb1f46592",
       "channels": [
         "0x7c675caf8c93750023677cabef7bbc0ddc9758ffaa4fe12c97e122aac1eb26b3"
-      ],
-      "hostname": "47.237.180.125",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xB6Ad0Cd0e1B822D827D61499c36887Fa89559C25",
       "channels": [
         "0x36d23e91339c42a2436e7aea05b768b74a4fecf7558c4445170e940135d7199a"
-      ],
-      "hostname": "115.144.221.103",
-      "coordinates": [
-        37.5112,
-        126.9741
       ]
     },
     {
       "id": "0x92E5B09BE4a803D9151a1cb9B89cB2cb632a40D9",
       "channels": [
         "0x6021573dbd207d81f954354211334b99237d3693e7bca97e8e413afb1462c62d"
-      ],
-      "hostname": "211.221.113.165",
-      "coordinates": [
-        37.2336,
-        127.201
       ]
     },
     {
       "id": "0x8F07738E2Beb230E35D8C5D9E723a70aa81CE172",
       "channels": [
         "0x3af9eec0dbc3874275c19b7467fd4d06004270c47d7839d1cbc823ddd304e84a"
-      ],
-      "hostname": "86.152.135.6",
-      "coordinates": [
-        51.2767,
-        0.184
       ]
     },
     {
       "id": "0x1FfBa8c22b50ffB9D56Fd0D26BEf5207a65D9091",
       "channels": [
         "0xcda2f3a490ea151bb97c30e4b0cbd996ad469e57f9907a287a108f638a8bb9fb"
-      ],
-      "hostname": "14.174.192.212",
-      "coordinates": [
-        12.25,
-        109.1833
       ]
     },
     {
       "id": "0xDD4A0c22Bb936BdCFF3D168281F0BE8Feb85cF11",
       "channels": [
         "0xfe9af852bdb4b9ac05f44c05f5e09ef02e6b195060cab3b173b43500b1474f0d"
-      ],
-      "hostname": "144.58.178.22",
-      "coordinates": [
-        35.4155,
-        -80.6143
       ]
     },
     {
       "id": "0x1b75A72a65622d60472fEC1B11aE522BE6631771",
       "channels": [
         "0xc2c6ce1de89bab22d07cb7ecc9e0beb03f417119b4aa865b4fd7d6ba5d9eaa22"
-      ],
-      "hostname": "101.251.211.252",
-      "coordinates": [
-        39.9288,
-        116.3889
       ]
     },
     {
       "id": "0x8Be8A44943861279377A693B51C0703420087480",
       "channels": [
         "0x978ca4ace7aca1372708e5f0121200053b51c31c577669852c193be4b27d940c"
-      ],
-      "hostname": "17.213.29.43",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x98Ff8b6979034f3999333458367D67fB911B524E",
       "channels": [
         "0x415e7a0f61aa8044f26ec51f59a0bec05b42cc6d107aee114e3758642d8fc736"
-      ],
-      "hostname": "44.228.9.4",
-      "coordinates": [
-        45.8491,
-        -119.7143
       ]
     },
     {
       "id": "0xba756d65A1A03F07D205749f35e2406e4a8522AD",
       "channels": [
         "0x0eeecc43ea04c313422578dffd2bd2fd6a8028d23233d887eeefc800f422196b"
-      ],
-      "hostname": "164.164.43.49",
-      "coordinates": [
-        20.0063,
-        77.006
       ]
     },
     {
       "id": "0x7B4dD877dB92CBd8efaE69114b30c778B60c6566",
       "channels": [
         "0x2ea4660e0771c31dfb3a5eaf5dbe97fc17ba84b0024b4967541ab1d1df42b0c4"
-      ],
-      "hostname": "29.129.43.28",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x37454150e1D3aeFC8451f9058b6C3bd2b75101eA",
       "channels": [
         "0xe342a1391c0076222699516aa3399b73481fa40ea6415cb89313c8c2d9630833"
-      ],
-      "hostname": "118.19.139.11",
-      "coordinates": [
-        36.3797,
-        139.0846
       ]
     },
     {
       "id": "0x6bC1be2E903BF84B553206aaf371285fB5C8aB16",
       "channels": [
         "0x614f5d05dbc62925ab211ea2f76ead7553a583e55873719fd71536060b285761"
-      ],
-      "hostname": "63.155.5.8",
-      "coordinates": [
-        44.0563,
-        -122.9164
       ]
     },
     {
       "id": "0xab33872868f67eE9a0203EED947e42Be046Bd259",
       "channels": [
         "0x29ff38599ec38d0610fcc82c5359ed4e98770f3df25f6064ab05e56bfbb18ea5"
-      ],
-      "hostname": "113.20.129.78",
-      "coordinates": [
-        -33.494,
-        143.2104
       ]
     },
     {
       "id": "0x967cC484D8b9c71615111d8065dC71B8AEeed968",
       "channels": [
         "0x46fc386b30146f142da68cee13ea59d2e26921ce8583f85a5aeb95460e96a4e5"
-      ],
-      "hostname": "54.205.39.182",
-      "coordinates": [
-        39.0481,
-        -77.4728
       ]
     },
     {
       "id": "0x09617a239D488371c96d557B95b580882Cc1913C",
       "channels": [
         "0xc33d41486f2b8e2f13cf922cac94c0b46daf5857572ea30f9ba089ad4d8b1af1"
-      ],
-      "hostname": "70.228.222.220",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xC5A1861C3B97D52f72B30cdceb5359a3c7fa685a",
       "channels": [
         "0x857d014443f9c42eb14ce07bf4747a9b80faf6a1b076af6c83e8289542970e39"
-      ],
-      "hostname": "147.233.133.203",
-      "coordinates": [
-        31.5,
-        34.75
       ]
     },
     {
       "id": "0xbdc29a8861658ad92EB42445bFC2a79260A9618c",
       "channels": [
         "0x89413e727adfbabca76f6c345f8ec4d7dbba58a7dfa1468403689f619c243254"
-      ],
-      "hostname": "134.232.128.47",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x347Bf5d726c4A215007aAb1851fDfF26867fB383",
       "channels": [
         "0x6cc79688693963d4e1b91e406863d94efcd7953264a00534c80fae64845a804b"
-      ],
-      "hostname": "63.37.237.85",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x370F476D3FC9C530Fb7D2C4e656580D0F6188903",
       "channels": [
         "0x79580ee7ba8ce2ff7aa2cc5da68e21718362a790aa2776c8b352cd4485fd9c42"
-      ],
-      "hostname": "40.243.137.190",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x4F2390751e486c1f228F1deE6ECEeCb9dc7f9412",
       "channels": [
         "0x00f70c29f1a2f21f95078fe3baa9237d54ef70212a0db6bec6a99e9964bbdf2f"
-      ],
-      "hostname": "27.230.51.159",
-      "coordinates": [
-        35.69,
-        139.69
       ]
     },
     {
       "id": "0x2C8F2870eaBEB82F726124675c405ED535AB0143",
       "channels": [
         "0x5feaf8b2f2f7ebb0205727d66f1e498c93ad3205c4e4080aae34bebb9438d11a"
-      ],
-      "hostname": "212.166.33.226",
-      "coordinates": [
-        50.8509,
-        4.3447
       ]
     },
     {
       "id": "0x30552591a10Fd317EDEFA378433A897937F9B679",
       "channels": [
         "0x973cbf86004813924f7e1028898f45c888d33eb17761a4f8583427e4f8c72ff3"
-      ],
-      "hostname": "23.223.165.64",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0x9018AB2CEC70DFa761ad76F44207cfa63dEE5625",
       "channels": [
         "0x75c3dbf55a5449655798148de8357a2e3b79dfe18ec0119e351b4aa82b0e59f2"
-      ],
-      "hostname": "46.213.189.58",
-      "coordinates": [
-        35,
-        38
       ]
     },
     {
       "id": "0xEA04CF49Dec4D6faBAEFf999F11F8EeD094204e5",
       "channels": [
         "0xe6cb611f67fca673216aa9a41d5a3476d1db6c4330466d1bda51ba8f59a81897"
-      ],
-      "hostname": "143.85.154.49",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     },
     {
       "id": "0xCeB78780F29C875c73a570BCB8d5E791Ceb15568",
       "channels": [
         "0xc5f5cc34fa7c07867801b5c99b867d5509872fb1103b719fe547136774a4eda9"
-      ],
-      "hostname": "180.141.243.222",
-      "coordinates": [
-        21.973,
-        108.6261
       ]
     },
     {
       "id": "0x71C0AA31ed92C1a44168A7B0B58b540F2296921D",
       "channels": [
         "0x39762e58ed6d8dcad726cd3235b14e1a404b276b85af345727c89c2a21d9b073"
-      ],
-      "hostname": "146.151.168.138",
-      "coordinates": [
-        37.751,
-        -97.822
       ]
     }
   ],
