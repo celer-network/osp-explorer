@@ -18,11 +18,11 @@ const INITIAL_VIEW_STATE = {
 const NODE_COLOR = {
   default: [255, 140, 0],
   selected: [4, 51, 255],
-  unselected: [255, 140, 0, 50],
+  unselected: [255, 140, 0, 0],
 };
 const CHANNEL_COLOR = {
   default: [0, 0, 0],
-  unselected: [0, 0, 0, 50],
+  unselected: [0, 0, 0, 0],
 };
 
 const NODE_LAYER_ID = "nodes";

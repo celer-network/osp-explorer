@@ -21,9 +21,21 @@ protobuf.load("./server/report.proto", (err, reportProto) => {
       const payload = {
         ethAddr: node.id,
         hostName,
-        port: faker.random.number(),
+        port: "8000",
         payments: faker.random.number(),
         openAccept: faker.random.boolean(),
+        stdOpenchanConfig: {
+          tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
+          minDeposit: "10000",
+          maxDeposit: "10000",
+        },
+        adminInfo: {
+          name: faker.name.firstName(),
+          email: faker.internet.email(),
+          organization: faker.company.companyName(),
+          address: faker.address.streetAddress(),
+          website: faker.internet.domainName(),
+        },
       };
       const ospInfoMsg = OspInfo.create(payload);
       axios

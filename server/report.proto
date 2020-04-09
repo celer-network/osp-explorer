@@ -31,11 +31,6 @@ message OspInfo {
     AdminInfo admin_info = 9;
 }
 
-message PeerBalances {
-    string peer = 1;
-    repeated ChannelBalance balances = 2;
-}
-
 message ChannelBalance {
     string cid = 1;
     string token_addr = 2;

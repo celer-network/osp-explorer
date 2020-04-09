@@ -20,27 +20,48 @@ export default class NodeDetail extends Component {
 
   renderInfo = () => {
     const { selectedNode } = this.props;
+    const {
+      id,
+      hostName,
+      port,
+      openAccept,
+      payments,
+      stdOpenchanConfig,
+      adminInfo,
+    } = selectedNode;
 
     return (
       <Descriptions layout="vertical" column={1} bordered={true} size="small">
-        <Descriptions.Item label="ETH Address">
-          {selectedNode.id}
-        </Descriptions.Item>
-        <Descriptions.Item label="Hostname">
-          {selectedNode.hostname}
-        </Descriptions.Item>
-        <Descriptions.Item label="Port">{selectedNode.port}</Descriptions.Item>
-        <Descriptions.Item label="Token Type">
-          {selectedNode.tokenType}
-        </Descriptions.Item>
+        <Descriptions.Item label="ETH Address">{id}</Descriptions.Item>
+        <Descriptions.Item label="Hostname">{hostName}</Descriptions.Item>
+        <Descriptions.Item label="Port">{port}</Descriptions.Item>
         <Descriptions.Item label="Accept Connection">
-          {selectedNode.acceptConnection ? "Yes" : "No"}
+          {openAccept ? "Yes" : "No"}
         </Descriptions.Item>
         <Descriptions.Item label="Payments processed">
-          {selectedNode.paymentNumber}
+          {payments}
         </Descriptions.Item>
-        <Descriptions.Item label="Available Balance">
-          {selectedNode.availableBalance}
+        <Descriptions.Item label="Channel Config">
+          Token Address: {stdOpenchanConfig.tokenAddr}
+          <br />
+          Minimum Deposit:
+          {stdOpenchanConfig.minDeposit}
+          <br />
+          Maximum Deposit:
+          {stdOpenchanConfig.maxDeposit}
+        </Descriptions.Item>
+        <Descriptions.Item label="Admin Info">
+          {adminInfo.name}
+          <br />
+          {adminInfo.organization}
+          <br />
+          {adminInfo.address}
+          <br />
+          <a href={adminInfo.website} target="_blank">
+            {adminInfo.website}
+          </a>
+          <br />
+          <a href={`mailto:${adminInfo.email}`}>{adminInfo.email}</a>
         </Descriptions.Item>
       </Descriptions>
     );
@@ -59,8 +80,9 @@ export default class NodeDetail extends Component {
         title="Node Details"
         placement="right"
         visible={visible}
-        onClose={this.handleClose}
         mask={false}
+        width={450}
+        onClose={this.handleClose}
       >
         <Tabs defaultActiveKey="info">
           <TabPane tab="Info" key="info">

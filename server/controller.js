@@ -15,12 +15,14 @@ async function setup(server, db) {
 
     try {
       const info = OspInfo.toObject(ospInfoMsg);
-      const { location } = reader.city(info.hostName);
+      const { hostName, payments } = info;
+      const { location } = reader.city(hostName);
 
       db.get("nodes")
-        .find({ id: info.ethAddress })
+        .find({ id: info.ethAddr })
         .assign({
           ...info,
+          payments: payments.low,
           coordinates: [location.latitude, location.longitude],
         })
         .write();
