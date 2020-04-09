@@ -1,7 +1,10 @@
 const protobuf = require("protobufjs");
 const fs = require("fs");
+const Web3 = require("web3");
 const Reader = require("@maxmind/geoip2-node").Reader;
+const config = require("./config");
 
+const web3 = new Web3(config.ethInstance);
 const dbBuffer = fs.readFileSync("./server/GeoLite2-City.mmdb");
 const reader = Reader.openBuffer(dbBuffer);
 
@@ -10,11 +13,23 @@ async function setup(server, db) {
   const OspInfo = reportProto.lookupType("report.OspInfo");
 
   server.post("/report", (req, res) => {
-    const { ospInfo } = req.body;
-    var ospInfoMsg = OspInfo.decode(ospInfo);
+    const { ospInfo, sig } = req.body;
+    const ospInfoMsg = OspInfo.decode(ospInfo);
+    const info = OspInfo.toObject(ospInfoMsg);
+
+    if (config.verifySig) {
+      const account = web3.eth.personal.ecRecover(
+        web3.utils.bytesToHex(ospInfo),
+        web3.utils.bytesToHex(sig)
+      );
+
+      if (account !== info.ethAddr) {
+        res.status(400).send("sig is not valid");
+        return;
+      }
+    }
 
     try {
-      const info = OspInfo.toObject(ospInfoMsg);
       const { hostName, payments } = info;
       const { location } = reader.city(hostName);
 
@@ -28,7 +43,7 @@ async function setup(server, db) {
         .write();
       res.send("success");
     } catch (err) {
-      res.status(500).send(err.stack);
+      res.status(400).send(err.stack);
     }
   });
 }
