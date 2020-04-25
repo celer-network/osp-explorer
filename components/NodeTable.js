@@ -87,7 +87,7 @@ export default class NodeTable extends Component {
   render() {
     const { nodes } = this.props;
     const pagination = {
-      pageSize: (window.innerHeight - 120) / 39,
+      pageSize: (window.innerHeight - 200) / 39,
     };
     const columns = [
       {

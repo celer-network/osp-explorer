@@ -33,6 +33,10 @@ const getConnectedNodes = (node, channels) => {
 
   _.get(node, "channels", []).forEach((channelID) => {
     const channel = channels[channelID];
+    if (!channel) {
+      return;
+    }
+
     connectedNodes[channel.peers[0]] = true;
     connectedNodes[channel.peers[1]] = true;
   });
@@ -65,6 +69,7 @@ export default class Map extends Component {
 
   renderLayers() {
     const { nodes, channels, selectedNode } = this.props;
+    console.log(this.props);
     const connectedNodes = getConnectedNodes(selectedNode, channels);
     const connectedChannels = getConnectedChannels(selectedNode);
 

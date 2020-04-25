@@ -41,28 +41,32 @@ export default class NodeDetail extends Component {
         <Descriptions.Item label="Payments processed">
           {payments}
         </Descriptions.Item>
-        <Descriptions.Item label="Channel Config">
-          Token Address: {stdOpenchanConfig.tokenAddr}
-          <br />
-          Minimum Deposit:
-          {stdOpenchanConfig.minDeposit}
-          <br />
-          Maximum Deposit:
-          {stdOpenchanConfig.maxDeposit}
-        </Descriptions.Item>
-        <Descriptions.Item label="Admin Info">
-          {adminInfo.name}
-          <br />
-          {adminInfo.organization}
-          <br />
-          {adminInfo.address}
-          <br />
-          <a href={adminInfo.website} target="_blank">
-            {adminInfo.website}
-          </a>
-          <br />
-          <a href={`mailto:${adminInfo.email}`}>{adminInfo.email}</a>
-        </Descriptions.Item>
+        {stdOpenchanConfig && (
+          <Descriptions.Item label="Channel Config">
+            Token Address: {stdOpenchanConfig.tokenAddr}
+            <br />
+            Minimum Deposit:
+            {stdOpenchanConfig.minDeposit}
+            <br />
+            Maximum Deposit:
+            {stdOpenchanConfig.maxDeposit}
+          </Descriptions.Item>
+        )}
+        {adminInfo && (
+          <Descriptions.Item label="Admin Info">
+            {adminInfo.name}
+            <br />
+            {adminInfo.organization}
+            <br />
+            {adminInfo.address}
+            <br />
+            <a href={adminInfo.website} target="_blank">
+              {adminInfo.website}
+            </a>
+            <br />
+            <a href={`mailto:${adminInfo.email}`}>{adminInfo.email}</a>
+          </Descriptions.Item>
+        )}
       </Descriptions>
     );
   };

@@ -7,7 +7,8 @@ const server = jsonServer.create();
 const router = jsonServer.router(config.database);
 const middlewares = jsonServer.defaults({ bodyParser: true });
 
-router.db.defaults({ nodes: [], channels: [] }).write();
+router.db.defaults({ nodes: [], channels: [], tokens: [] }).write();
+router.db.set("tokens", config.tokens).write();
 // Hack to fix web3 bug
 setTimeout(() => {
   monitor.monitorChannels(router.db);

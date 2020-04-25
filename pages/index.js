@@ -5,46 +5,68 @@ import fetch from "isomorphic-unfetch";
 import dynamic from "next/dynamic";
 
 import Map from "../components/Map";
+import TokenSelector from "../components/TokenSelector";
 import NodeDetails from "../components/NodeDetails";
 import styles from "./index.module.css";
 
 const NodeTable = dynamic(() => import("../components/NodeTable"), {
-  ssr: false
+  ssr: false,
 });
-
 const { Sider, Content } = Layout;
 
 const BASE_URL = "http://localhost:8000";
+
+const getSelectedChannels = _.memoize((selectedToken, channels) => {
+  return _.pickBy(
+    channels,
+    (channel) => channel.tokenAddress === selectedToken
+  );
+});
 
 class Index extends Component {
   constructor(props) {
     super(props);
 
+    const { tokens } = props;
+
     this.state = {
-      selectedNode: null
+      selectedNode: null,
+      selectedToken: tokens[0].address,
     };
   }
 
-  handleSelectNode = node => {
+  handleSelectToken = (token) => {
     this.setState({
-      selectedNode: node
+      selectedToken: token,
+    });
+  };
+
+  handleSelectNode = (node) => {
+    this.setState({
+      selectedNode: node,
     });
   };
 
   render() {
-    const { nodes, channels } = this.props;
-    const { selectedNode } = this.state;
+    const { nodes, channels, tokens } = this.props;
+    const { selectedNode, selectedToken } = this.state;
+    const selectedChannels = getSelectedChannels(selectedToken, channels);
 
     return (
       <Layout>
         <Sider theme={"light"} width={300}>
+          <TokenSelector
+            tokens={tokens}
+            selectedToken={selectedToken}
+            onChange={this.handleSelectToken}
+          />
           <NodeTable nodes={nodes} onSelectNode={this.handleSelectNode} />
         </Sider>
         <Layout>
           <Content className={styles.content}>
             <Map
               nodes={nodes}
-              channels={channels}
+              channels={selectedChannels}
               selectedNode={selectedNode}
               onSelectNode={this.handleSelectNode}
             />
@@ -56,14 +78,15 @@ class Index extends Component {
   }
 }
 
-Index.getInitialProps = async function() {
+Index.getInitialProps = async function () {
   const res = await fetch(`${BASE_URL}/db`);
   const json = await res.json();
-  const { nodes, channels } = json;
+  const { nodes, channels, tokens } = json;
 
   return {
+    tokens,
     nodes: _.keyBy(nodes, "id"),
-    channels: _.keyBy(channels, "id")
+    channels: _.keyBy(channels, "id"),
   };
 };
 
