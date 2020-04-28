@@ -1,6 +1,7 @@
 const protobuf = require("protobufjs");
 const fs = require("fs");
 const Web3 = require("web3");
+const differenceInMinutes = require("date-fns/differenceInMinutes");
 const Reader = require("@maxmind/geoip2-node").Reader;
 const config = require("./config");
 
@@ -32,15 +33,24 @@ async function setup(server, db) {
     try {
       const { hostName, payments } = info;
       const { location } = reader.city(hostName);
+      const now = new Date();
+      const node = db.get("nodes").find({ id: info.ethAddr });
+      const update = {
+        ...info,
+        payments: payments.low,
+        coordinates: [location.latitude, location.longitude],
+        lastUpdate: now,
+      };
 
-      db.get("nodes")
-        .find({ id: info.ethAddr })
-        .assign({
-          ...info,
-          payments: payments.low,
-          coordinates: [location.latitude, location.longitude],
-        })
-        .write();
+      if (
+        !node.value.initialUpdate ||
+        differenceInMinutes(now, node.value.lastUpdate) >
+          config.ospReportTimeout
+      ) {
+        update.initialUpdate = now;
+      }
+
+      node.assign(update).write();
       res.send("success");
     } catch (err) {
       res.status(400).send(err.stack);

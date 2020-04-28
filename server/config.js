@@ -5,6 +5,7 @@ module.exports = {
   ledgerContract: "0x4b7a6ee1128ff88b21cc4c6359164b21d671fa31",
   ledgerContractAbi: "./server/CelerLedger.abi",
   verifySig: false,
+  ospReportTimeout: 15, // 15 minutes
   tokens: [
     {
       name: "A",

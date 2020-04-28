@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { formatDistance } from "date-fns";
 import { Drawer, Tabs, Descriptions } from "antd";
 
 const { TabPane } = Tabs;
@@ -26,6 +27,8 @@ export default class NodeDetail extends Component {
       port,
       openAccept,
       payments,
+      initialUpdate,
+      lastUpdate,
       stdOpenchanConfig,
       adminInfo,
     } = selectedNode;
@@ -41,15 +44,22 @@ export default class NodeDetail extends Component {
         <Descriptions.Item label="Payments processed">
           {payments}
         </Descriptions.Item>
+        <Descriptions.Item label="Liveness">
+          Last Update:{" "}
+          {formatDistance(new Date(lastUpdate), new Date(), {
+            addSuffix: true,
+          })}
+          <br />
+          Live Time:{" "}
+          {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
+        </Descriptions.Item>
         {stdOpenchanConfig && (
           <Descriptions.Item label="Channel Config">
             Token Address: {stdOpenchanConfig.tokenAddr}
             <br />
-            Minimum Deposit:
-            {stdOpenchanConfig.minDeposit}
+            Minimum Deposit: {stdOpenchanConfig.minDeposit}
             <br />
-            Maximum Deposit:
-            {stdOpenchanConfig.maxDeposit}
+            Maximum Deposit: {stdOpenchanConfig.maxDeposit}
           </Descriptions.Item>
         )}
         {adminInfo && (
