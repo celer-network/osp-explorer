@@ -38,7 +38,7 @@ async function setup(server, db) {
       const update = {
         ...info,
         payments: payments.low,
-        coordinates: [location.latitude, location.longitude],
+        coordinates: [location.longitude, location.latitude],
         lastUpdate: now,
       };
 
