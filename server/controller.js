@@ -11,7 +11,7 @@ const reader = Reader.openBuffer(dbBuffer);
 
 async function setup(server, db) {
   reportProto = await protobuf.load("./server/report.proto");
-  const OspInfo = reportProto.lookupType("report.OspInfo");
+  const OspInfo = reportProto.lookupType("ospreport.OspInfo");
 
   server.post("/report", (req, res) => {
     const { ospInfo, sig } = req.body;
@@ -31,10 +31,10 @@ async function setup(server, db) {
     }
 
     try {
-      const { hostName, payments } = info;
-      const { location } = reader.city(hostName);
-      const now = new Date();
+      const { rpcHost, payments } = info;
       const node = db.get("nodes").find({ id: info.ethAddr });
+      const { location } = reader.city(rpcHost.split(":")[0]);
+      const now = new Date();
       const update = {
         ...info,
         payments: payments.low,
@@ -53,6 +53,7 @@ async function setup(server, db) {
       node.assign(update).write();
       res.send("success");
     } catch (err) {
+      console.log(err);
       res.status(400).send(err.stack);
     }
   });

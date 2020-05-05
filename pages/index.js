@@ -70,7 +70,10 @@ class Index extends Component {
               selectedNode={selectedNode}
               onSelectNode={this.handleSelectNode}
             />
-            <NodeDetails selectedNode={selectedNode} />
+            <NodeDetails
+              selectedNode={selectedNode}
+              selectedToken={selectedToken}
+            />
           </Content>
         </Layout>
       </Layout>

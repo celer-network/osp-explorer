@@ -11,24 +11,24 @@ const db = low(adapter);
 const nodeCollection = db.get("nodes");
 
 protobuf.load("./server/report.proto", (err, reportProto) => {
-  const OspInfo = reportProto.lookupType("report.OspInfo");
+  const OspInfo = reportProto.lookupType("ospreport.OspInfo");
 
   nodeCollection
     .value()
     // .slice(0, 1)
     .forEach((node) => {
-      const hostName = faker.internet.ip();
       const payload = {
         ethAddr: node.id,
-        hostName,
-        port: "8000",
+        rpcHost: `${faker.internet.ip()}:8000`,
         payments: faker.random.number(),
         openAccept: faker.random.boolean(),
-        stdOpenchanConfig: {
-          tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
-          minDeposit: "10000",
-          maxDeposit: "10000",
-        },
+        stdOpenchanConfigs: [
+          {
+            tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
+            minDeposit: "10000",
+            maxDeposit: "10000",
+          },
+        ],
         adminInfo: {
           name: faker.name.firstName(),
           email: faker.internet.email(),

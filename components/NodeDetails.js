@@ -20,24 +20,26 @@ export default class NodeDetail extends Component {
   };
 
   renderInfo = () => {
-    const { selectedNode } = this.props;
+    const { selectedNode, selectedToken } = this.props;
     const {
       id,
-      hostName,
-      port,
+      rpcHost,
       openAccept,
       payments,
       initialUpdate,
       lastUpdate,
-      stdOpenchanConfig,
+      stdOpenchanConfigs,
       adminInfo,
     } = selectedNode;
+
+    const stdOpenchanConfig = stdOpenchanConfigs.find(
+      (config) => config.tokenAddr === selectedToken
+    );
 
     return (
       <Descriptions layout="vertical" column={1} bordered={true} size="small">
         <Descriptions.Item label="ETH Address">{id}</Descriptions.Item>
-        <Descriptions.Item label="Hostname">{hostName}</Descriptions.Item>
-        <Descriptions.Item label="Port">{port}</Descriptions.Item>
+        <Descriptions.Item label="Host">{rpcHost}</Descriptions.Item>
         <Descriptions.Item label="Accept Connection">
           {openAccept ? "Yes" : "No"}
         </Descriptions.Item>
