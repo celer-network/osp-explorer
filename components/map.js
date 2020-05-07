@@ -69,7 +69,6 @@ export default class Map extends Component {
 
   renderLayers() {
     const { nodes, channels, selectedNode } = this.props;
-    console.log(this.props);
     const connectedNodes = getConnectedNodes(selectedNode, channels);
     const connectedChannels = getConnectedChannels(selectedNode);
 

@@ -3,6 +3,7 @@ const FileSync = require("lowdb/adapters/FileSync");
 const faker = require("faker");
 const axios = require("axios");
 const protobuf = require("protobufjs");
+const Web3 = require("web3");
 
 const config = require("./config");
 
@@ -13,35 +14,34 @@ const nodeCollection = db.get("nodes");
 protobuf.load("./server/report.proto", (err, reportProto) => {
   const OspInfo = reportProto.lookupType("ospreport.OspInfo");
 
-  nodeCollection
-    .value()
-    // .slice(0, 1)
-    .forEach((node) => {
-      const payload = {
-        ethAddr: node.id,
-        rpcHost: `${faker.internet.ip()}:8000`,
-        payments: faker.random.number(),
-        openAccept: faker.random.boolean(),
-        stdOpenchanConfigs: [
-          {
-            tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
-            minDeposit: "10000",
-            maxDeposit: "10000",
-          },
-        ],
-        adminInfo: {
-          name: faker.name.firstName(),
-          email: faker.internet.email(),
-          organization: faker.company.companyName(),
-          address: faker.address.streetAddress(),
-          website: faker.internet.domainName(),
+  nodeCollection.value().forEach((node) => {
+    const payload = {
+      ethAddr: node.id,
+      rpcHost: `${faker.internet.ip()}:8000`,
+      payments: faker.random.number(),
+      openAccept: faker.random.boolean(),
+      stdOpenchanConfigs: [
+        {
+          tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
+          minDeposit: "10000",
+          maxDeposit: "10000",
         },
-      };
-      const ospInfoMsg = OspInfo.create(payload);
-      axios
-        .post(`http://localhost:8000/report`, {
-          ospInfo: OspInfo.encode(ospInfoMsg).finish().toJSON().data,
-        })
-        .catch(() => {});
-    });
+      ],
+      adminInfo: {
+        name: faker.name.firstName(),
+        email: faker.internet.email(),
+        organization: faker.company.companyName(),
+        address: faker.address.streetAddress(),
+        website: faker.internet.domainName(),
+      },
+    };
+    const ospInfoMsg = OspInfo.create(payload);
+    axios
+      .post(`http://localhost:8000/report`, {
+        ospInfo: Web3.utils.bytesToHex(
+          OspInfo.encode(ospInfoMsg).finish().toJSON().data
+        ),
+      })
+      .catch(() => {});
+  });
 });

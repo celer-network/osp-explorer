@@ -3,6 +3,7 @@ const fs = require("fs");
 const Web3 = require("web3");
 const differenceInMinutes = require("date-fns/differenceInMinutes");
 const Reader = require("@maxmind/geoip2-node").Reader;
+const utils = require("./utils");
 const config = require("./config");
 
 const web3 = new Web3(config.ethInstance);
@@ -15,13 +16,15 @@ async function setup(server, db) {
 
   server.post("/report", (req, res) => {
     const { ospInfo, sig } = req.body;
-    const ospInfoMsg = OspInfo.decode(ospInfo);
+    const ospInfoMsg = OspInfo.decode(
+      web3.utils.hexToBytes(utils.formatHex(ospInfo))
+    );
     const info = OspInfo.toObject(ospInfoMsg);
 
     if (config.verifySig) {
       const account = web3.eth.personal.ecRecover(
-        web3.utils.bytesToHex(ospInfo),
-        web3.utils.bytesToHex(sig)
+        utils.formatHex(ospInfo),
+        utils.formatHex(sig)
       );
 
       if (account !== info.ethAddr) {
@@ -31,7 +34,7 @@ async function setup(server, db) {
     }
 
     try {
-      const { rpcHost, payments } = info;
+      const { rpcHost, payments = {} } = info;
       const node = db.get("nodes").find({ id: info.ethAddr });
       const { location } = reader.city(rpcHost.split(":")[0]);
       const now = new Date();

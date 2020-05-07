@@ -8133,6 +8133,14 @@
         "0x2f480CBAd39E629c96eAC25906E713B1A5A2e49F",
         "0xc5B57CF06716827D5DF7F1061042Baf4a03cb69a"
       ]
+    },
+    {
+      "tokenAddress": "0xeC7E5Fa6e7645C2d47cB8642AAC539F189d7Cd67",
+      "id": "0x386491f4842c439d859c40f7b0cc254d8eccb99b2e85ad4e6ff89ecd83fee9f6",
+      "peers": [
+        "0x522A10B9f192B7447106b2d07d7676436f468566",
+        "0xc5B57CF06716827D5DF7F1061042Baf4a03cb69a"
+      ]
     }
   ],
   "tokens": [
