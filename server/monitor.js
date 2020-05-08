@@ -5,21 +5,21 @@ const config = require("./config");
 const web3 = new Web3(config.ethInstance);
 
 function monitorChannels(db) {
-  const snapshot = fs.readJsonSync(config.snapshot);
+  // const snapshot = fs.readJsonSync(config.snapshot);
   const abi = fs.readJSONSync(config.ledgerContractAbi);
   const ledgerContract = new web3.eth.Contract(abi, config.ledgerContract);
 
-  snapshot.Channels.forEach((channel) => {
-    importChannel(db, {
-      channelId: channel.Cid,
-      tokenAddress: channel.Token,
-      peerAddrs: [channel.P1, channel.P2],
-    });
-  });
+  // snapshot.Channels.forEach((channel) => {
+  //   importChannel(db, {
+  //     channelId: channel.Cid,
+  //     tokenAddress: channel.Token,
+  //     peerAddrs: [channel.P1, channel.P2],
+  //   });
+  // });
 
   ledgerContract.events.OpenChannel(
     {
-      fromBlock: snapshot.EndBlockNumber,
+      fromBlock: 10012234,
     },
     (err, event) => {
       if (err) {
