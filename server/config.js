@@ -10,20 +10,12 @@ module.exports = {
   ospReportTimeout: 15, // 15 minutes
   tokens: [
     {
-      name: "A",
-      address: "0xeC7E5Fa6e7645C2d47cB8642AAC539F189d7Cd67",
-    },
-    {
-      name: "B",
-      address: "0xFd3Cc9D89E7AC516e4D1df89233D999C210a5bFf",
-    },
-    {
-      name: "C",
-      address: "0xe496Fa48419C14B0Fe2dCf9c1d5C0F408BA3BD2D",
-    },
-    {
-      name: "D",
+      name: "ETH",
       address: "0x0000000000000000000000000000000000000000",
+    },
+    {
+      name: "CELR",
+      address: "0x4f9254c83eb525f9fcf346490bbb3ed28a81c667",
     },
   ],
 };

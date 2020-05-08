@@ -14,7 +14,7 @@ const NodeTable = dynamic(() => import("../components/NodeTable"), {
 });
 const { Sider, Content } = Layout;
 
-const BASE_URL = process.env.SERVER;
+const BASE_URL = process.env.SERVER || "http://localhost:8000";
 
 const getSelectedChannels = _.memoize((selectedToken, channels) => {
   return _.pickBy(
@@ -28,7 +28,6 @@ class Index extends Component {
     super(props);
 
     const { tokens } = props;
-
     this.state = {
       selectedNode: null,
       selectedToken: tokens[0].address,

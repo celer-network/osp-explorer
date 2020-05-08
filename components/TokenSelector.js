@@ -4,7 +4,7 @@ const { Option } = Select;
 
 export default function TokenSelector(props) {
   const { tokens, onChange, selectedToken } = props;
-  console.log(props);
+
   return (
     <Card type="inner" size="small" title="Channel Token Type">
       <Select
