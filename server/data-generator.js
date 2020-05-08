@@ -11,7 +11,7 @@ const adapter = new FileSync(config.database);
 const db = low(adapter);
 const nodeCollection = db.get("nodes");
 
-protobuf.load("./server/report.proto", (err, reportProto) => {
+protobuf.load("./server/proto/report.proto", (err, reportProto) => {
   const OspInfo = reportProto.lookupType("ospreport.OspInfo");
 
   nodeCollection.value().forEach((node) => {

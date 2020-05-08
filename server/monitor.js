@@ -5,21 +5,13 @@ const config = require("./config");
 const web3 = new Web3(config.ethInstance);
 
 function monitorChannels(db) {
-  // const snapshot = fs.readJsonSync(config.snapshot);
-  const abi = fs.readJSONSync(config.ledgerContractAbi);
+  const abi = fs.readJSONSync("./server/contracts/CelerLedger.abi");
   const ledgerContract = new web3.eth.Contract(abi, config.ledgerContract);
-
-  // snapshot.Channels.forEach((channel) => {
-  //   importChannel(db, {
-  //     channelId: channel.Cid,
-  //     tokenAddress: channel.Token,
-  //     peerAddrs: [channel.P1, channel.P2],
-  //   });
-  // });
 
   ledgerContract.events.OpenChannel(
     {
-      fromBlock: 10012234,
+      fromBlock:
+        db.get("meta.endBlockNumber").value() + 1 || config.initialBlock,
     },
     (err, event) => {
       if (err) {
@@ -27,6 +19,8 @@ function monitorChannels(db) {
         return;
       }
 
+      console.log("New Event tx", event.transactionHash:);
+      db.set("meta.endBlockNumber", event.blockNumber).write();
       importChannel(db, event.returnValues);
     }
   );
