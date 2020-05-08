@@ -41,18 +41,24 @@ function importChannel(db, channel) {
   if (!node0) {
     nodeCollection.push({ id: peerAddrs[0], channels: [channelId] }).write();
   } else {
-    nodeCollection.find({ id: peerAddrs[0] }).assign({
-      channels: [...node0.channels, channelId],
-    });
+    nodeCollection
+      .find({ id: peerAddrs[0] })
+      .assign({
+        channels: [...node0.channels, channelId],
+      })
+      .write();
   }
 
   const node1 = nodeCollection.find({ id: peerAddrs[1] }).value();
   if (!node1) {
     nodeCollection.push({ id: peerAddrs[1], channels: [channelId] }).write();
   } else {
-    nodeCollection.find({ id: peerAddrs[1] }).assign({
-      channels: [...node1.channels, channelId],
-    });
+    nodeCollection
+      .find({ id: peerAddrs[1] })
+      .assign({
+        channels: [...node1.channels, channelId],
+      })
+      .write();
   }
 }
 

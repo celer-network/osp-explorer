@@ -47,10 +47,10 @@ async function setup(server, db) {
         lastUpdate: now,
       };
 
+      const { initialUpdate, lastUpdate } = node.value();
       if (
-        !node.value.initialUpdate ||
-        differenceInMinutes(now, node.value.lastUpdate) >
-          config.ospReportTimeout
+        !initialUpdate ||
+        differenceInMinutes(now, lastUpdate) > config.ospReportTimeout
       ) {
         update.initialUpdate = now;
       }
