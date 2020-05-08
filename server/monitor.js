@@ -19,7 +19,7 @@ function monitorChannels(db) {
         return;
       }
 
-      console.log("New Event tx", event.transactionHash:);
+      console.log("New Event tx", event.transactionHash);
       db.set("meta.endBlockNumber", event.blockNumber).write();
       importChannel(db, event.returnValues);
     }
