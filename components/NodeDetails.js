@@ -32,7 +32,8 @@ export default class NodeDetail extends Component {
       adminInfo,
     } = selectedNode;
 
-    const stdOpenchanConfig = stdOpenchanConfigs.find(
+    const stdOpenchanConfig = _.find(
+      stdOpenchanConfigs,
       (config) => config.tokenAddr === selectedToken
     );
 
@@ -46,15 +47,17 @@ export default class NodeDetail extends Component {
         <Descriptions.Item label="Payments processed">
           {payments}
         </Descriptions.Item>
-        <Descriptions.Item label="Liveness">
-          Last Update:{" "}
-          {formatDistance(new Date(lastUpdate), new Date(), {
-            addSuffix: true,
-          })}
-          <br />
-          Live Time:{" "}
-          {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
-        </Descriptions.Item>
+        {lastUpdate && (
+          <Descriptions.Item label="Liveness">
+            Last Update:{" "}
+            {formatDistance(new Date(lastUpdate), new Date(), {
+              addSuffix: true,
+            })}
+            <br />
+            Live Time:{" "}
+            {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
+          </Descriptions.Item>
+        )}
         {stdOpenchanConfig && (
           <Descriptions.Item label="Channel Config">
             Token Address: {stdOpenchanConfig.tokenAddr}
