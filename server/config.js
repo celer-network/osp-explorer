@@ -4,6 +4,7 @@ module.exports = {
   ethInstance: "wss://mainnet.infura.io/ws/v3/ce581be62b43483b8627f4f9f2ad40d6",
   ledgerContract: "0x4f7f56d57607e346ff8719c9f34cba3bbccae71f",
   ledgerContractAbi: "./server/CelerLedger.abi",
+  snapshot: "./snapshot.json",
   verifySig: false,
   ospReportTimeout: 15, // 15 minutes
   tokens: [
