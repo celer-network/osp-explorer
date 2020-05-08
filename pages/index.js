@@ -14,7 +14,7 @@ const NodeTable = dynamic(() => import("../components/NodeTable"), {
 });
 const { Sider, Content } = Layout;
 
-const BASE_URL = "http://localhost:8000";
+const BASE_URL = process.env.SERVER;
 
 const getSelectedChannels = _.memoize((selectedToken, channels) => {
   return _.pickBy(
