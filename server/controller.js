@@ -14,7 +14,7 @@ async function setup(server, db) {
   reportProto = await protobuf.load("./server/report.proto");
   const OspInfo = reportProto.lookupType("ospreport.OspInfo");
 
-  server.post("/report", (req, res) => {
+  server.post("/report", async (req, res) => {
     const { ospInfo, sig } = req.body;
     const ospInfoMsg = OspInfo.decode(
       web3.utils.hexToBytes(utils.formatHex(ospInfo))
@@ -36,7 +36,8 @@ async function setup(server, db) {
     try {
       const { rpcHost, payments = {} } = info;
       const node = db.get("nodes").find({ id: info.ethAddr });
-      const { location } = reader.city(rpcHost.split(":")[0]);
+      const ip = await utils.getIP(rpcHost.split(":")[0]);
+      const { location } = reader.city(ip);
       const now = new Date();
       const update = {
         ...info,
