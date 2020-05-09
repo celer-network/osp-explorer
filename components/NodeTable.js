@@ -72,7 +72,7 @@ export default class NodeTable extends Component {
     },
 
     render: (text, record) => {
-      if (dataIndex === "id") {
+      if (dataIndex === "hostRpc") {
         return `${text.slice(0, 16)}...`;
       }
 
@@ -92,11 +92,11 @@ export default class NodeTable extends Component {
 
     const columns = [
       {
-        title: "Address",
-        dataIndex: "id",
-        key: "id",
+        title: "Host",
+        dataIndex: "rpcHost",
+        key: "rpcHost",
         width: "70%",
-        ...this.getColumnSearchProps("id"),
+        ...this.getColumnSearchProps("rpcHost"),
       },
       {
         title: "Channels",

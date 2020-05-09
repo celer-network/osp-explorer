@@ -44,9 +44,9 @@ export default class NodeDetail extends Component {
         <Descriptions.Item label="Accept Connection">
           {openAccept ? "Yes" : "No"}
         </Descriptions.Item>
-        <Descriptions.Item label="Payments processed">
+        {/* <Descriptions.Item label="Payments processed">
           {payments}
-        </Descriptions.Item>
+        </Descriptions.Item> */}
         {lastUpdate && (
           <Descriptions.Item label="Liveness">
             Last Update:{" "}
