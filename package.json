@@ -7,7 +7,8 @@
     "next-build": "next build",
     "next-start": "next start",
     "server": "node server/server.js",
-    "generate-data": "node server/data-generator.js"
+    "generate-data": "node server/data-generator.js",
+    "lint": "semistandard"
   },
   "dependencies": {
     "@maxmind/geoip2-node": "^1.4.0",

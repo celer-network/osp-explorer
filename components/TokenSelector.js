@@ -1,4 +1,4 @@
-import { Card, Select } from "antd";
+import { Card, Select } from 'antd';
 
 const { Option } = Select;
 
@@ -8,7 +8,7 @@ export default function TokenSelector(props) {
   return (
     <Card type="inner" size="small" title="Channel Token Type">
       <Select
-        style={{ width: "100%" }}
+        style={{ width: '100%' }}
         value={selectedToken}
         onChange={onChange}
       >

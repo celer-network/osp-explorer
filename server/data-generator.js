@@ -1,18 +1,22 @@
-const low = require("lowdb");
-const FileSync = require("lowdb/adapters/FileSync");
-const faker = require("faker");
-const axios = require("axios");
-const protobuf = require("protobufjs");
-const Web3 = require("web3");
+const low = require('lowdb');
+const FileSync = require('lowdb/adapters/FileSync');
+const faker = require('faker');
+const axios = require('axios');
+const protobuf = require('protobufjs');
+const Web3 = require('web3');
 
-const config = require("./config");
+const config = require('./config');
 
 const adapter = new FileSync(config.database);
 const db = low(adapter);
-const nodeCollection = db.get("nodes");
+const nodeCollection = db.get('nodes');
 
-protobuf.load("./server/proto/report.proto", (err, reportProto) => {
-  const OspInfo = reportProto.lookupType("ospreport.OspInfo");
+protobuf.load('./server/proto/report.proto', (err, reportProto) => {
+  if (err) {
+    return;
+  }
+
+  const OspInfo = reportProto.lookupType('ospreport.OspInfo');
 
   nodeCollection.value().forEach((node) => {
     const payload = {
@@ -22,9 +26,9 @@ protobuf.load("./server/proto/report.proto", (err, reportProto) => {
       openAccept: faker.random.boolean(),
       stdOpenchanConfigs: [
         {
-          tokenAddr: "0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396",
-          minDeposit: "10000",
-          maxDeposit: "10000",
+          tokenAddr: '0x82e8A274AdDa78D7F09c12Ae8af06c2cf081B396',
+          minDeposit: '10000',
+          maxDeposit: '10000',
         },
       ],
       adminInfo: {
@@ -37,7 +41,7 @@ protobuf.load("./server/proto/report.proto", (err, reportProto) => {
     };
     const ospInfoMsg = OspInfo.create(payload);
     axios
-      .post(`http://localhost:8000/report`, {
+      .post('http://localhost:8000/report', {
         ospInfo: Web3.utils.bytesToHex(
           OspInfo.encode(ospInfoMsg).finish().toJSON().data
         ),

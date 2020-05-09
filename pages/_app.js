@@ -1,7 +1,7 @@
-import "antd/dist/antd.css";
-import "./app.css";
+import 'antd/dist/antd.css';
+import './app.css';
 
-function MyApp({ Component, pageProps }) {
+function MyApp ({ Component, pageProps }) {
   return <Component {...pageProps} />;
 }
 

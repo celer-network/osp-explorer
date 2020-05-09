@@ -1,9 +1,9 @@
-const jsonServer = require("json-server");
-const monitor = require("./monitor");
-const fs = require("fs-extra");
+const jsonServer = require('json-server');
+const monitor = require('./monitor');
+const fs = require('fs-extra');
 
-const controller = require("./controller");
-const config = require("./config");
+const controller = require('./controller');
+const config = require('./config');
 
 const server = jsonServer.create();
 const router = jsonServer.router(config.database);
@@ -25,7 +25,7 @@ if (config.snapshot) {
     .write();
 }
 
-router.db.set("tokens", config.tokens).write();
+router.db.set('tokens', config.tokens).write();
 // Hack to fix web3 bug
 setTimeout(() => {
   monitor.monitorChannels(router.db);
@@ -36,6 +36,6 @@ controller.setup(server, router.db).then(() => {
   server.use(router);
 
   server.listen(config.port, () => {
-    console.log("JSON Server is running");
+    console.log('JSON Server is running');
   });
 });
