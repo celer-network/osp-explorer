@@ -84,11 +84,18 @@ Index.getInitialProps = async function () {
   const res = await fetch(`${BASE_URL}/db`);
   const json = await res.json();
   const { nodes, channels, tokens } = json;
+  const nodeByID = _(nodes).filter("rpcHost").keyBy("id").value();
+  const channelByID = _(channels)
+    .filter((channel) => {
+      return nodeByID[channel.peers[0]] && nodeByID[channel.peers[1]];
+    })
+    .keyBy("id")
+    .value();
 
   return {
     tokens,
-    nodes: _.keyBy(nodes, "id"),
-    channels: _.keyBy(channels, "id"),
+    nodes: nodeByID,
+    channels: channelByID,
   };
 };
 
