@@ -1,6 +1,6 @@
 const jsonServer = require('json-server');
 const monitor = require('./monitor');
-const fs = require('fs-extra');
+const axios = require('axios');
 
 const controller = require('./controller');
 const config = require('./config');
@@ -8,34 +8,53 @@ const config = require('./config');
 const server = jsonServer.create();
 const router = jsonServer.router(config.database);
 const middlewares = jsonServer.defaults({ bodyParser: true });
+const db = router.db;
 
-if (config.snapshot) {
-  const snapshot = fs.readJsonSync(config.snapshot);
-  router.db.defaults(snapshot).write();
-} else {
-  router.db
-    .defaults({
-      nodes: [],
-      channels: [],
-      tokens: [],
-      meta: {
-        endBlockNumber: config.initialBlock,
-      },
-    })
-    .write();
+const HOUR = 1000 * 60 * 60;
+
+async function initDB() {
+  let res;
+  if (config.backup) {
+    res = await axios.get(config.backup);
+  }
+
+  db.defaults({
+    nodes: [],
+    channels: [],
+    tokens: config.tokens,
+    meta: {
+      endBlockNumber: config.initialBlock,
+    },
+    ...res.data,
+  }).write();
 }
 
-router.db.set('tokens', config.tokens).write();
-// Hack to fix web3 bug
-setTimeout(() => {
-  monitor.monitorChannels(router.db);
-}, 500);
+function backupDB() {
+  axios.put(config.backup, db.getState());
+}
 
-server.use(middlewares);
-controller.setup(server, router.db).then(() => {
-  server.use(router);
+async function initServer() {
+  await initDB();
 
-  server.listen(config.port, () => {
-    console.log('JSON Server is running');
+  db.set('tokens', config.tokens).write();
+
+  // Hack to fix web3 bug
+  setTimeout(() => {
+    monitor.monitorChannels(db);
+  }, 500);
+
+  setInterval(() => {
+    backupDB();
+  }, HOUR);
+
+  server.use(middlewares);
+  controller.setup(server, db).then(() => {
+    server.use(router);
+
+    server.listen(config.port, () => {
+      console.log('JSON Server is running');
+    });
   });
-});
+}
+
+initServer();
