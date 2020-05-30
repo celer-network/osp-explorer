@@ -1,6 +1,6 @@
-import React, { Component } from "react";
-import { Table, Input, Button } from "antd";
-import { SearchOutlined } from "@ant-design/icons";
+import React, { Component } from 'react';
+import { Table, Input, Button } from 'antd';
+import { SearchOutlined } from '@ant-design/icons';
 
 export default class NodeTable extends Component {
   onRow = (record) => {
@@ -33,7 +33,7 @@ export default class NodeTable extends Component {
           onPressEnter={() =>
             this.handleSearch(selectedKeys, confirm, dataIndex)
           }
-          style={{ width: 188, marginBottom: 8, display: "block" }}
+          style={{ width: 188, marginBottom: 8, display: 'block' }}
         />
         <Button
           type="primary"
@@ -51,11 +51,11 @@ export default class NodeTable extends Component {
     ),
 
     filterIcon: (filtered) => (
-      <SearchOutlined style={{ color: filtered ? "#1890ff" : undefined }} />
+      <SearchOutlined style={{ color: filtered ? '#1890ff' : undefined }} />
     ),
 
     onFilter: (value, record) => {
-      if (dataIndex === "channels") {
+      if (dataIndex === 'channels') {
         return record[dataIndex].length == value;
       }
 
@@ -72,11 +72,11 @@ export default class NodeTable extends Component {
     },
 
     render: (text, record) => {
-      if (dataIndex === "hostRpc") {
+      if (dataIndex === 'rpcHost') {
         return `${text.slice(0, 16)}...`;
       }
 
-      if (dataIndex === "channels") {
+      if (dataIndex === 'channels') {
         return record.channels.length;
       }
 
@@ -92,18 +92,18 @@ export default class NodeTable extends Component {
 
     const columns = [
       {
-        title: "Host",
-        dataIndex: "rpcHost",
-        key: "rpcHost",
-        width: "70%",
-        ...this.getColumnSearchProps("rpcHost"),
+        title: 'Host',
+        dataIndex: 'rpcHost',
+        key: 'rpcHost',
+        width: '70%',
+        ...this.getColumnSearchProps('rpcHost'),
       },
       {
-        title: "Channels",
-        dataIndex: "channels",
-        key: "channels",
-        width: "30%",
-        ...this.getColumnSearchProps("channels"),
+        title: 'Channels',
+        dataIndex: 'channels',
+        key: 'channels',
+        width: '30%',
+        ...this.getColumnSearchProps('channels'),
       },
     ];
 
