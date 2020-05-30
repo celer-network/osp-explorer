@@ -11,6 +11,7 @@
     "lint": "semistandard"
   },
   "dependencies": {
+    "@alch/alchemy-web3": "^0.1.13",
     "@maxmind/geoip2-node": "^1.4.0",
     "antd": "^4.0.4",
     "axios": "^0.19.2",

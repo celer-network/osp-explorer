@@ -1,35 +1,67 @@
 const fs = require('fs-extra');
-const Web3 = require('web3');
+const _ = require('lodash');
+const { createAlchemyWeb3 } = require('@alch/alchemy-web3');
 const config = require('./config');
 
-const web3 = new Web3(config.ethInstance);
+const web3 = createAlchemyWeb3(config.ethInstance);
 
 function monitorChannels(db) {
-  const abi = fs.readJSONSync('./server/contracts/CelerLedger.abi');
-  const ledgerContract = new web3.eth.Contract(abi, config.ledgerContract);
+  const routerAbi = fs.readJSONSync('./server/contracts/RouterRegistry.abi');
+  const routerContract = new web3.eth.Contract(
+    routerAbi,
+    config.routerRegistryContract
+  );
+
+  routerContract.events.RouterUpdated(
+    {
+      fromBlock: db.get('meta.endBlockNumber').value() + 1,
+    },
+    _.partial(handleRouterUpdated, db)
+  );
+
+  const ledgerAbi = fs.readJSONSync('./server/contracts/CelerLedger.abi');
+  const ledgerContract = new web3.eth.Contract(
+    ledgerAbi,
+    config.ledgerContract
+  );
 
   ledgerContract.events.OpenChannel(
     {
-      fromBlock:
-        db.get('meta.endBlockNumber').value() + 1 || config.initialBlock,
+      fromBlock: db.get('meta.endBlockNumber').value() + 1,
     },
-    (err, event) => {
-      if (err) {
-        console.error(err);
-        return;
-      }
-
-      console.log('New Event tx', event.transactionHash);
-      db.set('meta.endBlockNumber', event.blockNumber).write();
-      importChannel(db, event.returnValues);
-    }
+    _.partial(handleOpenChannel, db)
   );
 }
 
-function importChannel(db, channel) {
+function handleRouterUpdated(db, err, event) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log('New RouterUpdated Event tx', event.transactionHash);
+  db.set('meta.endBlockNumber', event.blockNumber).write();
+
+  const { routerAddress } = event.returnValues;
   const nodeCollection = db.get('nodes');
+
+  if (!nodeCollection.find({ id: routerAddress }).value()) {
+    nodeCollection.push({ id: routerAddress, channels: [] }).write();
+  }
+}
+
+function handleOpenChannel(db, err, event) {
+  if (err) {
+    console.error(err);
+    return;
+  }
+
+  console.log('New OpenChannel Event tx', event.transactionHash);
+  db.set('meta.endBlockNumber', event.blockNumber).write();
+
+  const { channelId, tokenAddress, peerAddrs } = event.returnValues;
   const channelCollection = db.get('channels');
-  const { channelId, tokenAddress, peerAddrs } = channel;
+  const nodeCollection = db.get('nodes');
 
   if (!channelCollection.find({ id: channelId }).value()) {
     channelCollection

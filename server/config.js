@@ -5,7 +5,7 @@ module.exports = {
     process.env.ETH_INSTANCE ||
     'wss://mainnet.infura.io/ws/v3/ce581be62b43483b8627f4f9f2ad40d6',
   ledgerContract: '0x4f7f56d57607e346ff8719c9f34cba3bbccae71f',
-  routerRegistryContract: '2f11656af5d1e9be634a8d00417cc05ebb43fc08',
+  routerRegistryContract: '0x2f11656af5d1e9be634a8d00417cc05ebb43fc08',
   backup: process.env.BACKUP,
   initialBlock: 10012234,
   verifySig: false,

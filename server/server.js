@@ -13,7 +13,7 @@ const db = router.db;
 const HOUR = 1000 * 60 * 60;
 
 async function initDB() {
-  let res;
+  let res = {};
   if (config.backup) {
     res = await axios.get(config.backup);
   }
