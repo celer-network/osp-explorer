@@ -2,13 +2,14 @@ const protobuf = require('protobufjs');
 const fs = require('fs');
 const Web3 = require('web3');
 const differenceInMinutes = require('date-fns/differenceInMinutes');
-const Reader = require('@maxmind/geoip2-node').Reader;
+const axios = require('axios');
+
 const utils = require('./utils');
 const config = require('./config');
 
 const web3 = new Web3(config.ethInstance);
-const dbBuffer = fs.readFileSync('./server/geo/GeoLite2-City.mmdb');
-const reader = Reader.openBuffer(dbBuffer);
+
+const IP_API = 'http://ip-api.com/json/';
 
 async function setup(server, db) {
   const reportProto = await protobuf.load('./server/proto/report.proto');
@@ -38,12 +39,15 @@ async function setup(server, db) {
     try {
       const node = db.get('nodes').find({ id: ethAddr });
       const ip = await utils.getIP(rpcHost.split(':')[0]);
-      const { location } = reader.city(ip);
+
+      const {
+        data: { lon, lat },
+      } = await axios.get(IP_API + ip);
       const now = new Date();
       const update = {
         ...info,
         payments: payments.low || 0,
-        coordinates: [location.longitude, location.latitude],
+        coordinates: [lon, lat],
         lastUpdate: now,
       };
 
