@@ -12,12 +12,12 @@ const web3 = new Web3(config.ethInstance);
 const IP_API = 'http://ip-api.com/json/';
 const IP_GEO = {
   '119.23.226.3': {
-    lat: 22.6331625,
-    log: 113.9754049,
+    lat: 22.63,
+    lon: 113.97,
   },
   '59.110.60.26': {
-    lat: 39.9390731,
-    log: 116.1172671,
+    lat: 39.93,
+    lon: 116.11,
   },
 };
 
@@ -57,7 +57,6 @@ async function setup(server, db) {
         lon = IP_GEO[ip].lon;
         lat = IP_GEO[ip].lat;
       }
-      console.log(ip, IP_GEO[ip]);
 
       const now = new Date();
       const update = {
