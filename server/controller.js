@@ -57,6 +57,8 @@ async function setup(server, db) {
         lon = IP_GEO[ip].lon;
         lat = IP_GEO[ip].lat;
       }
+      console.log(ip, IP_GEO[ip]);
+
       const now = new Date();
       const update = {
         ...info,
