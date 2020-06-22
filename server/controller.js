@@ -10,6 +10,16 @@ const config = require('./config');
 const web3 = new Web3(config.ethInstance);
 
 const IP_API = 'http://ip-api.com/json/';
+const IP_GEO = {
+  '119.23.226.3': {
+    lat: 22.6331625,
+    log: 113.9754049,
+  },
+  '59.110.60.26': {
+    lat: 39.9390731,
+    log: 116.1172671,
+  },
+};
 
 async function setup(server, db) {
   const reportProto = await protobuf.load('./server/proto/report.proto');
@@ -40,9 +50,13 @@ async function setup(server, db) {
       const node = db.get('nodes').find({ id: ethAddr });
       const ip = await utils.getIP(rpcHost.split(':')[0]);
 
-      const {
+      let {
         data: { lon, lat },
       } = await axios.get(IP_API + ip);
+      if (IP_GEO[ip]) {
+        lon = IP_GEO[ip].lon;
+        lat = IP_GEO[ip].lat;
+      }
       const now = new Date();
       const update = {
         ...info,
