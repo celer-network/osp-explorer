@@ -19,6 +19,10 @@ const IP_GEO = {
     lat: 39.93,
     lon: 116.11,
   },
+  '8.210.167.66': {
+    lat: 22.35,
+    lon: 113.84,
+  },
 };
 
 async function setup(server, db) {
