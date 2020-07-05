@@ -1,3 +1,13 @@
 .ant-descriptions-item-content {
   word-break: break-all;
 }
+
+.map-tooltip {
+  pointer-events: none;
+  position: absolute;
+  font-size: 12px;
+  padding: 8px;
+  background: #000;
+  color: #fff;
+  overflow-y: hidden;
+}

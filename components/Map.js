@@ -1,11 +1,11 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import { StaticMap } from "react-map-gl";
-import DeckGL from "@deck.gl/react";
-import { LineLayer, ScatterplotLayer } from "@deck.gl/layers";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import { StaticMap } from 'react-map-gl';
+import DeckGL from '@deck.gl/react';
+import { LineLayer, ScatterplotLayer } from '@deck.gl/layers';
 
 const MAPBOX_ACCESS_TOKEN =
-  "pk.eyJ1IjoiZnpodSIsImEiOiJjazg2bXd1NG4wNWZ3M2Vwc3NqcmR3aDdmIn0.A-KahdW0A_TfMhUZHmYVig";
+  'pk.eyJ1IjoiZnpodSIsImEiOiJjazg2bXd1NG4wNWZ3M2Vwc3NqcmR3aDdmIn0.A-KahdW0A_TfMhUZHmYVig';
 
 const INITIAL_VIEW_STATE = {
   longitude: -3,
@@ -25,13 +25,13 @@ const CHANNEL_COLOR = {
   unselected: [0, 0, 0, 0],
 };
 
-const NODE_LAYER_ID = "nodes";
-const CHANNEL_LAYER_ID = "channels";
+const NODE_LAYER_ID = 'nodes';
+const CHANNEL_LAYER_ID = 'channels';
 
 const getConnectedNodes = (node, channels) => {
   const connectedNodes = {};
 
-  _.get(node, "channels", []).forEach((channelID) => {
+  _.get(node, 'channels', []).forEach((channelID) => {
     const channel = channels[channelID];
     if (!channel) {
       return;
@@ -47,7 +47,7 @@ const getConnectedNodes = (node, channels) => {
 const getConnectedChannels = (node) => {
   const connectedChannels = {};
 
-  _.get(node, "channels", []).forEach((channelID) => {
+  _.get(node, 'channels', []).forEach((channelID) => {
     connectedChannels[channelID] = true;
   });
 
@@ -55,10 +55,16 @@ const getConnectedChannels = (node) => {
 };
 
 export default class Map extends Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {};
+  }
+
   handleClick = (info) => {
     const { onSelectNode } = this.props;
     const { layer, object } = info;
-    const layerID = _.get(layer, "id");
+    const layerID = _.get(layer, 'id');
 
     if (layerID === NODE_LAYER_ID) {
       onSelectNode(object);
@@ -66,6 +72,23 @@ export default class Map extends Component {
       onSelectNode(null);
     }
   };
+
+  handleHover = (info) => {
+    const { x, y, object } = info;
+    this.setState({ x, y, hoveredObject: object });
+  };
+
+  renderTooltip() {
+    const { x, y, hoveredObject } = this.state;
+    console.log(hoveredObject, x, y);
+    return (
+      hoveredObject && (
+        <div className="map-tooltip" style={{ left: x, top: y }}>
+          <span>{hoveredObject.rpcHost || hoveredObject.id}</span>
+        </div>
+      )
+    );
+  }
 
   renderLayers() {
     const { nodes, channels, selectedNode } = this.props;
@@ -98,6 +121,7 @@ export default class Map extends Component {
         radiusMinPixels: 5,
         radiusMaxPixels: 10,
         getPosition: (d) => d.coordinates,
+        onHover: this.handleHover,
       }),
       new LineLayer({
         id: CHANNEL_LAYER_ID,
@@ -112,8 +136,9 @@ export default class Map extends Component {
 
           return CHANNEL_COLOR.unselected;
         },
-        getWidth: 2,
+        getWidth: 3,
         pickable: true,
+        onHover: this.handleHover,
       }),
     ];
   }
@@ -125,9 +150,10 @@ export default class Map extends Component {
         controller={true}
         layers={this.renderLayers()}
         onClick={this.handleClick}
-        getCursor={() => "default"}
+        getCursor={() => 'default'}
       >
         <StaticMap reuseMaps mapboxApiAccessToken={MAPBOX_ACCESS_TOKEN} />
+        {this.renderTooltip()}
       </DeckGL>
     );
   }
