@@ -1,8 +1,9 @@
-import React, { Component } from "react";
-import { formatDistance } from "date-fns";
-import { Drawer, Tabs, Descriptions } from "antd";
+import React, { Component } from 'react';
+import { formatDistance } from 'date-fns';
+import { Drawer, Tabs, Descriptions, Collapse } from 'antd';
 
 const { TabPane } = Tabs;
+const { Panel } = Collapse;
 
 export default class NodeDetail extends Component {
   constructor(props) {
@@ -25,7 +26,6 @@ export default class NodeDetail extends Component {
       id,
       rpcHost,
       openAccept,
-      payments,
       initialUpdate,
       lastUpdate,
       stdOpenchanConfigs,
@@ -42,19 +42,16 @@ export default class NodeDetail extends Component {
         <Descriptions.Item label="ETH Address">{id}</Descriptions.Item>
         <Descriptions.Item label="Host">{rpcHost}</Descriptions.Item>
         <Descriptions.Item label="Accept Connection">
-          {openAccept ? "Yes" : "No"}
+          {openAccept ? 'Yes' : 'No'}
         </Descriptions.Item>
-        {/* <Descriptions.Item label="Payments processed">
-          {payments}
-        </Descriptions.Item> */}
         {lastUpdate && (
           <Descriptions.Item label="Liveness">
-            Last Update:{" "}
+            Last Update:{' '}
             {formatDistance(new Date(lastUpdate), new Date(), {
               addSuffix: true,
             })}
             <br />
-            Live Time:{" "}
+            Live Time:{' '}
             {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
           </Descriptions.Item>
         )}
@@ -86,6 +83,51 @@ export default class NodeDetail extends Component {
     );
   };
 
+  renderChannels = () => {
+    const { selectedNode, selectedToken, nodes } = this.props;
+    const { ospPeers } = selectedNode;
+    const channels = _(ospPeers)
+      .map((peerChannels) => {
+        const { peer, balances } = peerChannels;
+        const channel = _.find(
+          balances,
+          (balance) => balance.tokenAddr === selectedToken
+        );
+
+        if (!channel) {
+          return;
+        }
+
+        return {
+          ...channel,
+          peer,
+        };
+      })
+      .compact()
+      .value();
+
+    return (
+      <Collapse>
+        {_.map(channels, (channel) => {
+          const { peer, cid, selfBalance, peerBalance } = channel;
+          return (
+            <Panel header={_.get(nodes[peer], 'rpcHost')}>
+              <Descriptions layout="vertical" column={1} size="small">
+                <Descriptions.Item label="Channel ID">{cid}</Descriptions.Item>
+                <Descriptions.Item label="Self Balance">
+                  {selfBalance}
+                </Descriptions.Item>
+                <Descriptions.Item label="Peer Balance">
+                  {peerBalance}
+                </Descriptions.Item>
+              </Descriptions>
+            </Panel>
+          );
+        })}
+      </Collapse>
+    );
+  };
+
   render() {
     const { selectedNode } = this.props;
     const { visible } = this.state;
@@ -108,7 +150,7 @@ export default class NodeDetail extends Component {
             {this.renderInfo()}
           </TabPane>
           <TabPane tab="Channels" key="channels">
-            Content of Tab Pane 2
+            {this.renderChannels()}
           </TabPane>
         </Tabs>
       </Drawer>

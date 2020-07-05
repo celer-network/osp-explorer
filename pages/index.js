@@ -1,20 +1,20 @@
-import React, { Component } from "react";
-import _ from "lodash";
-import { Layout } from "antd";
-import fetch from "isomorphic-unfetch";
-import dynamic from "next/dynamic";
+import React, { Component } from 'react';
+import _ from 'lodash';
+import { Layout } from 'antd';
+import fetch from 'isomorphic-unfetch';
+import dynamic from 'next/dynamic';
 
-import Map from "../components/Map";
-import TokenSelector from "../components/TokenSelector";
-import NodeDetails from "../components/NodeDetails";
-import styles from "./index.module.css";
+import Map from '../components/Map';
+import TokenSelector from '../components/TokenSelector';
+import NodeDetails from '../components/NodeDetails';
+import styles from './index.module.css';
 
-const NodeTable = dynamic(() => import("../components/NodeTable"), {
+const NodeTable = dynamic(() => import('../components/NodeTable'), {
   ssr: false,
 });
 const { Sider, Content } = Layout;
 
-const BASE_URL = process.env.SERVER || "http://localhost:8000";
+const BASE_URL = process.env.SERVER || 'http://localhost:8000';
 
 const getSelectedChannels = _.memoize((selectedToken, channels) => {
   return _.pickBy(
@@ -53,7 +53,7 @@ class Index extends Component {
 
     return (
       <Layout>
-        <Sider theme={"light"} width={300}>
+        <Sider theme={'light'} width={300}>
           <TokenSelector
             tokens={tokens}
             selectedToken={selectedToken}
@@ -70,6 +70,7 @@ class Index extends Component {
               onSelectNode={this.handleSelectNode}
             />
             <NodeDetails
+              nodes={nodes}
               selectedNode={selectedNode}
               selectedToken={selectedToken}
             />
@@ -84,12 +85,12 @@ Index.getInitialProps = async function () {
   const res = await fetch(`${BASE_URL}/db`);
   const json = await res.json();
   const { nodes, channels, tokens } = json;
-  const nodeByID = _(nodes).filter("rpcHost").keyBy("id").value();
+  const nodeByID = _(nodes).filter('rpcHost').keyBy('id').value();
   const channelByID = _(channels)
     .filter((channel) => {
       return nodeByID[channel.peers[0]] && nodeByID[channel.peers[1]];
     })
-    .keyBy("id")
+    .keyBy('id')
     .value();
 
   return {
