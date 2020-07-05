@@ -75,7 +75,9 @@ async function setup(server, db) {
         !initialUpdate ||
         differenceInMinutes(now, lastUpdate) > config.ospReportTimeout
       ) {
+        period = [initialUpdate, lastUpdate];
         update.initialUpdate = now;
+        update.livePeriods = [...(update.livePeriods || []), period];
       }
 
       node.assign(update).write();
