@@ -73,11 +73,13 @@ async function setup(server, db) {
       const { initialUpdate, lastUpdate } = node.value();
       if (
         !initialUpdate ||
-        differenceInMinutes(now, lastUpdate) > config.ospReportTimeout
+        differenceInMinutes(now, new Date(lastUpdate)) > config.ospReportTimeout
       ) {
-        period = [initialUpdate, lastUpdate];
+        if (initialUpdate) {
+          const period = [initialUpdate, lastUpdate];
+          update.livePeriods = [...(update.livePeriods || []), period];
+        }
         update.initialUpdate = now;
-        update.livePeriods = [...(update.livePeriods || []), period];
       }
 
       node.assign(update).write();

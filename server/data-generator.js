@@ -40,12 +40,15 @@ protobuf.load('./server/proto/report.proto', (err, reportProto) => {
       },
     };
     const ospInfoMsg = OspInfo.create(payload);
-    axios
-      .post('http://localhost:8000/report', {
-        ospInfo: Web3.utils.bytesToHex(
-          OspInfo.encode(ospInfoMsg).finish().toJSON().data
-        ),
-      })
-      .catch(() => {});
+
+    if (node.id === '0xCe2A0401b8080a7368656b346D00db9c5641Ab58') {
+      axios
+        .post('http://localhost:8000/report', {
+          ospInfo: Web3.utils.bytesToHex(
+            OspInfo.encode(ospInfoMsg).finish().toJSON().data
+          ),
+        })
+        .catch(() => {});
+    }
   });
 });
