@@ -59,7 +59,11 @@ class Index extends Component {
             selectedToken={selectedToken}
             onChange={this.handleSelectToken}
           />
-          <NodeTable nodes={nodes} onSelectNode={this.handleSelectNode} />
+          <NodeTable
+            nodes={nodes}
+            selectedChannels={selectedChannels}
+            onSelectNode={this.handleSelectNode}
+          />
         </Sider>
         <Layout>
           <Content className={styles.content}>

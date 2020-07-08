@@ -31,6 +31,9 @@ export default class NodeDetail extends Component {
       stdOpenchanConfigs,
       adminInfo,
       livePeriods,
+      regionName,
+      country,
+      ip,
     } = selectedNode;
 
     const stdOpenchanConfig = _.find(
@@ -42,17 +45,23 @@ export default class NodeDetail extends Component {
       <>
         <Descriptions layout="vertical" column={1} bordered={true} size="small">
           <Descriptions.Item label="ETH Address">{id}</Descriptions.Item>
-          <Descriptions.Item label="Host">{rpcHost}</Descriptions.Item>
+          <Descriptions.Item label="Host">
+            <b>Domain:</b> {rpcHost}
+            <br />
+            <b>IP:</b> {ip}
+            <br />
+            <b>Location:</b> {`${regionName}, ${country}`}
+          </Descriptions.Item>
           <Descriptions.Item label="Accept Connection">
             {openAccept ? 'Yes' : 'No'}
           </Descriptions.Item>
           {stdOpenchanConfig && (
             <Descriptions.Item label="Channel Config">
-              Token Address: {stdOpenchanConfig.tokenAddr}
+              <b>Token Address:</b> {stdOpenchanConfig.tokenAddr}
               <br />
-              Minimum Deposit: {stdOpenchanConfig.minDeposit}
+              <b>Minimum Deposit:</b> {stdOpenchanConfig.minDeposit}
               <br />
-              Maximum Deposit: {stdOpenchanConfig.maxDeposit}
+              <b>Maximum Deposit:</b> {stdOpenchanConfig.maxDeposit}
             </Descriptions.Item>
           )}
           {adminInfo && (
@@ -72,12 +81,12 @@ export default class NodeDetail extends Component {
           )}
           {lastUpdate && (
             <Descriptions.Item label="Liveness">
-              Last Update:{' '}
+              <b>Last Update:</b>{' '}
               {formatDistance(new Date(lastUpdate), new Date(), {
                 addSuffix: true,
               })}
               <br />
-              Live Time:{' '}
+              <b>Live Time:</b>{' '}
               {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
             </Descriptions.Item>
           )}

@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import _ from 'lodash';
 import { Table, Input, Button } from 'antd';
 import { SearchOutlined } from '@ant-design/icons';
 
@@ -77,7 +78,7 @@ export default class NodeTable extends Component {
       }
 
       if (dataIndex === 'channels') {
-        return record.channels.length;
+        return record.channelCount;
       }
 
       return text;
@@ -85,10 +86,17 @@ export default class NodeTable extends Component {
   });
 
   render() {
-    const { nodes } = this.props;
+    const { nodes, selectedChannels } = this.props;
     const pagination = {
       pageSize: Math.floor((window.innerHeight - 200) / 39),
     };
+    const nodeList = _.map(nodes, (node) => ({
+      ...node,
+      channelCount: _.filter(
+        node.channels,
+        (channel) => selectedChannels[channel]
+      ).length,
+    }));
 
     const columns = [
       {
@@ -110,7 +118,7 @@ export default class NodeTable extends Component {
     return (
       <Table
         columns={columns}
-        dataSource={Object.values(nodes)}
+        dataSource={nodeList}
         size="small"
         onRow={this.onRow}
         pagination={pagination}
