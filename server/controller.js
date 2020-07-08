@@ -51,11 +51,9 @@ async function setup(server, db) {
     }
 
     try {
-      const node = db.get('nodes').find({ id: ethAddr });
       const ip = await utils.getIP(rpcHost.split(':')[0]);
-
       let {
-        data: { lon, lat },
+        data: { lon, lat, country, regionName },
       } = await axios.get(IP_API + ip);
       if (IP_GEO[ip]) {
         lon = IP_GEO[ip].lon;
@@ -65,12 +63,21 @@ async function setup(server, db) {
       const now = new Date();
       const update = {
         ...info,
+        ip,
+        country,
+        regionName,
         payments: payments.low || 0,
         coordinates: [lon, lat],
         lastUpdate: now,
       };
 
-      const { initialUpdate, lastUpdate } = node.value();
+      const node = db.get('nodes').find({ id: ethAddr });
+      const nodeValue = node.value();
+      if (regionName !== nodeValue.regionName) {
+        update.regionUpdate = now;
+      }
+
+      const { initialUpdate, lastUpdate } = nodeValue;
       if (
         !initialUpdate ||
         differenceInMinutes(now, new Date(lastUpdate)) > config.ospReportTimeout
