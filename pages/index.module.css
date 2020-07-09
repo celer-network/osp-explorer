@@ -2,3 +2,15 @@
   position: relative;
   height: 100vh;
 }
+
+.banner {
+  position: absolute;
+  z-index: 10;
+  top: 0;
+  right: 5px;
+}
+
+.bannerIcon {
+  padding: 5px;
+  cursor: pointer;
+}

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import _ from 'lodash';
 import { Layout } from 'antd';
+import { GithubOutlined, MessageOutlined } from '@ant-design/icons';
 import fetch from 'isomorphic-unfetch';
 import dynamic from 'next/dynamic';
 
@@ -67,6 +68,22 @@ class Index extends Component {
         </Sider>
         <Layout>
           <Content className={styles.content}>
+            <span className={styles.banner}>
+              <a
+                href="https://github.com/celer-network/osp-explorer"
+                target="_blank"
+                title="Github"
+              >
+                <GithubOutlined className={styles.bannerIcon} />
+              </a>
+              <a
+                href="https://github.com/celer-network/osp-explorer"
+                target="_blank"
+                title="Telegram"
+              >
+                <MessageOutlined className={styles.bannerIcon} />
+              </a>
+            </span>
             <Map
               nodes={nodes}
               channels={selectedChannels}
