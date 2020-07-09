@@ -55,15 +55,7 @@ export default class NodeDetail extends Component {
           <Descriptions.Item label="Accept Connection">
             {openAccept ? 'Yes' : 'No'}
           </Descriptions.Item>
-          {stdOpenchanConfig && (
-            <Descriptions.Item label="Channel Config">
-              <b>Token Address:</b> {stdOpenchanConfig.tokenAddr}
-              <br />
-              <b>Minimum Deposit:</b> {stdOpenchanConfig.minDeposit}
-              <br />
-              <b>Maximum Deposit:</b> {stdOpenchanConfig.maxDeposit}
-            </Descriptions.Item>
-          )}
+
           {adminInfo && (
             <Descriptions.Item label="Admin Info">
               {adminInfo.name}
@@ -105,6 +97,15 @@ export default class NodeDetail extends Component {
               )}
             />
           </Panel>
+          {stdOpenchanConfig && (
+            <Panel header="Channel Config">
+              <b>Token Address:</b> {stdOpenchanConfig.tokenAddr}
+              <br />
+              <b>Minimum Deposit:</b> {stdOpenchanConfig.minDeposit}
+              <br />
+              <b>Maximum Deposit:</b> {stdOpenchanConfig.maxDeposit}
+            </Panel>
+          )}
         </Collapse>
       </>
     );
