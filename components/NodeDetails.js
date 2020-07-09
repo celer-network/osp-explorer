@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { formatDistance, format } from 'date-fns';
-import { Drawer, Tabs, Descriptions, Collapse, List } from 'antd';
+import { Drawer, Tabs, Descriptions, Collapse, List, Alert } from 'antd';
 
 const { TabPane } = Tabs;
 const { Panel } = Collapse;
@@ -26,20 +26,21 @@ export default class NodeDetail extends Component {
       id,
       rpcHost,
       openAccept,
+      joinedTime,
       initialUpdate,
       lastUpdate,
       stdOpenchanConfigs,
       adminInfo,
-      livePeriods,
+      livePeriods: livePds,
       regionName,
       country,
       ip,
     } = selectedNode;
-
     const stdOpenchanConfig = _.find(
       stdOpenchanConfigs,
       (config) => config.tokenAddr === selectedToken
     );
+    const livePeriods = [...livePds, [initialUpdate, lastUpdate]];
 
     return (
       <>
@@ -72,13 +73,16 @@ export default class NodeDetail extends Component {
             </Descriptions.Item>
           )}
           {lastUpdate && (
-            <Descriptions.Item label="Liveness">
+            <Descriptions.Item label="Online Time">
+              <b>Joined On:</b>{' '}
+              {format(new Date(joinedTime || livePeriods[0][0]), 'Pp')}
+              <br />
               <b>Last Update:</b>{' '}
               {formatDistance(new Date(lastUpdate), new Date(), {
                 addSuffix: true,
               })}
               <br />
-              <b>Live Time:</b>{' '}
+              <b>Continuous Online Time:</b>{' '}
               {formatDistance(new Date(initialUpdate), new Date(lastUpdate))}
             </Descriptions.Item>
           )}
@@ -135,24 +139,32 @@ export default class NodeDetail extends Component {
       .value();
 
     return (
-      <Collapse>
-        {_.map(channels, (channel) => {
-          const { peer, cid, selfBalance, peerBalance } = channel;
-          return (
-            <Panel header={_.get(nodes[peer], 'rpcHost')}>
-              <Descriptions layout="vertical" column={1} size="small">
-                <Descriptions.Item label="Channel ID">{cid}</Descriptions.Item>
-                <Descriptions.Item label="Self Balance">
-                  {selfBalance}
-                </Descriptions.Item>
-                <Descriptions.Item label="Peer Balance">
-                  {peerBalance}
-                </Descriptions.Item>
-              </Descriptions>
-            </Panel>
-          );
-        })}
-      </Collapse>
+      <>
+        <Collapse>
+          {_.map(channels, (channel) => {
+            const { peer, cid, selfBalance, peerBalance } = channel;
+            return (
+              <Panel header={_.get(nodes[peer], 'rpcHost')}>
+                <Descriptions layout="vertical" column={1} size="small">
+                  <Descriptions.Item label="Channel ID">
+                    {cid}
+                  </Descriptions.Item>
+                  <Descriptions.Item label="Self Balance">
+                    {selfBalance}
+                  </Descriptions.Item>
+                  <Descriptions.Item label="Peer Balance">
+                    {peerBalance}
+                  </Descriptions.Item>
+                </Descriptions>
+              </Panel>
+            );
+          })}
+        </Collapse>
+        <Alert
+          message="Note: Only channels with active grpc connections are included in this tab. Channels shown in the map and the left panel are based on on-chain contract information only"
+          type="info"
+        />
+      </>
     );
   };
 

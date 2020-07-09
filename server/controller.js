@@ -42,7 +42,7 @@ async function setup(server, db) {
     );
     const info = OspInfo.toObject(ospInfoMsg);
     const { ethAddr, rpcHost, payments = {} } = info;
-    console.log('New report from', ethAddr);
+    console.log('New report from', ethAddr, rpcHost);
 
     if (config.verifySig) {
       const account = web3.eth.personal.ecRecover(
@@ -90,6 +90,8 @@ async function setup(server, db) {
         if (initialUpdate) {
           const period = [initialUpdate, lastUpdate];
           update.livePeriods = [...(update.livePeriods || []), period];
+        } else {
+          update.joinedTime = now;
         }
         update.initialUpdate = now;
       }
