@@ -70,14 +70,14 @@ class Index extends Component {
           <Content className={styles.content}>
             <span className={styles.banner}>
               <a
-                href="https://github.com/celer-network/osp-explorer"
+                href="https://github.com/celer-network/goCeler-oss"
                 target="_blank"
                 title="Github"
               >
                 <GithubOutlined className={styles.bannerIcon} />
               </a>
               <a
-                href="https://github.com/celer-network/osp-explorer"
+                href="https://t.me/celernodesOSP"
                 target="_blank"
                 title="Telegram"
               >
