@@ -9,7 +9,7 @@ module.exports = {
   backup: process.env.BACKUP,
   initialBlock: 10012234,
   verifySig: false,
-  ospReportTimeout: 30, // 30 minutes
+  ospReportTimeout: 120, // 120 minutes
   tokens: [
     {
       name: 'ETH',
