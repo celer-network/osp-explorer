@@ -89,7 +89,7 @@ async function setup(server, db) {
       ) {
         if (initialUpdate) {
           const period = [initialUpdate, lastUpdate];
-          update.livePeriods = [...(update.livePeriods || []), period];
+          update.livePeriods = [...(nodeValue.livePeriods || []), period];
         } else {
           update.joinedTime = now;
         }
