@@ -31,10 +31,10 @@ export default class NodeDetail extends Component {
       lastUpdate,
       stdOpenchanConfigs,
       adminInfo,
-      livePeriods: livePds,
       regionName,
       country,
       ip,
+      livePeriods: livePds = [],
     } = selectedNode;
     const stdOpenchanConfig = _.find(
       stdOpenchanConfigs,
